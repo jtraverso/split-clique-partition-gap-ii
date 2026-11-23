@@ -1,0 +1,9 @@
+Split Gap II, English review draft 0.2
+Build date: 2026-11-22
+Targets: lake build SplitGapII SplitGapIIAudit
+Lean 4.35.0-rc3
+Mathlib c55e6e786f49471c72fbddbec5415808896aec1e
+Local reproduction used path overrides pointing to cached packages. All nine dependency revisions matched lake-manifest.json.
+Project source modules: 44
+Lake output: Build completed successfully (9004 jobs).
+Axiom audit: 25 declarations. AXIOMS.txt records their reported dependencies.

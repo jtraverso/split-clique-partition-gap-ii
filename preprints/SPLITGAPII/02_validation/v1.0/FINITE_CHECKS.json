@@ -1,0 +1,33 @@
+{
+  "method": "Exact integral recursion and rational primal and dual certificates, against every eligible core subset.",
+  "partition_numbers": [
+    [
+      10,
+      10
+    ],
+    [
+      11,
+      10
+    ],
+    [
+      11,
+      11
+    ]
+  ],
+  "positive_dual_pairs_middle": [
+    "15",
+    "24",
+    "34"
+  ],
+  "tight_sets_covering_34": [
+    "1234",
+    "2345"
+  ],
+  "tight_sets_covering_15": [
+    "0125",
+    "0145",
+    "1245",
+    "01245"
+  ],
+  "verifier": "03_reproducibility/six_core.py"
+}

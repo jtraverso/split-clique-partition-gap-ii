@@ -49,6 +49,14 @@ for lost, weights, prices, expected in stages:
     assert all(sum(prices.get(e, 0) for e in inside[q]) >= score[q] for q in blocks)
     fractional = sum(x * score[q] for q, x in weights.items())
     assert fractional == sum(prices.values())
+    if lost == "01":
+        tight = [q for q in blocks if sum(prices.get(e, 0) for e in inside[q]) == score[q]]
+        at34 = [q for q in tight if "34" in inside[q]]
+        at15 = [q for q in tight if "15" in inside[q]]
+        assert set(at34) == {"1234", "2345"}
+        assert set(at15) == {"0125", "0145", "1245", "01245"}
+        assert all(mask[a] & mask[b] for a in at34 for b in at15)
+        assert not mask["234"] & mask["0145"] and (score["234"], score["0145"]) == (2, 3)
     integral = integral_optimum(score)
     baseline = len(pairs) + sum(map(len, hosts.values())) - 2 * len(required)
     result = baseline - integral, baseline - fractional

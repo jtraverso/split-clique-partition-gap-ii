@@ -1,0 +1,33 @@
+'QuadraticExteriorPalomar.cp_eq_series_cp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.gap_change_of_induced_restriction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.gap_change_le_removed_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.gap_change_of_dropped_hosts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.partial_host_score_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.complete_partial_assignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.gap_ge_of_partial_assignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.gap_ge_after_cross_deletions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.residual_host_realizer_of_deficit_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QuadraticExteriorPalomar.series_gap_le_of_deficit_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.series_gap_le_of_sparse_exceptions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.frac_eq_residualSup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.cp_le_of_residual_pack' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.gap_eq_residual_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.marked_assignment_of_deficit_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QuadraticExteriorPalomar.gap_stability_of_partial_assignment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QuadraticExteriorPalomar.gap_stability_of_marked_lists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.gap_stability_after_cross_deletions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QuadraticExteriorPalomar.partial_savings_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.residual_gap_edit_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.assignment_of_vertex_budgets' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.series_gap_le_of_vertex_excess' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.gap_stability_of_residual_loads' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.gap_of_matching_mixtures' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticExteriorPalomar.miss_product_le_exp' depends on axioms: [propext, Classical.choice, Quot.sound]

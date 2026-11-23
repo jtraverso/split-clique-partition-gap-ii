@@ -1,8 +1,17 @@
 # Additive Gaps for Edge-Clique Partitions of Split Graphs II
 
-**Stability of Host Transfer** · Juan Pablo Traverso Gianini · Review draft 0.2
+**Stability of Host Transfer** · Juan Pablo Traverso Gianini · Preprint 1.0 · 22 November 2026
 
-The [English manuscript](split-gap-ii-en-v0.2.md) studies how an incomplete host assignment affects the integral–fractional edge-clique partition gap of a split graph. The [first paper](https://github.com/jtraverso/split-clique-partition-gap) gives the exact transfer for complete assignments. The [previous draft](split-gap-ii-en-v0.1.md) is retained for comparison.
+The second paper in the series studies perturbations of the exact transfer established in [Part I](https://github.com/jtraverso/split-clique-partition-gap). A proper assignment missing $L$ required pairs determines the unrestricted partition gap to within $2L$ of the residual packing gap. Starting from a complete assignment, the best universal coefficient for crossing-edge deletions lies between one and two. Its exact value is open.
+
+| | English | Español |
+|---|---|---|
+| Manuscript | [PDF](preprints/SPLITGAPII/01_manuscript/split-gap-ii-en.pdf) · [Markdown](preprints/SPLITGAPII/01_manuscript/split-gap-ii-en.md) | [PDF](preprints/SPLITGAPII/01_manuscript/split-gap-ii-es.pdf) · [Markdown](preprints/SPLITGAPII/01_manuscript/split-gap-ii-es.md) |
+| Formalization companion | [PDF](preprints/SPLITGAPII/05_formalization/companion-en.pdf) | [PDF](preprints/SPLITGAPII/05_formalization/companion-es.pdf) |
+
+**DOI** <https://doi.org/10.5281/zenodo.24452724> · [Complete edition](archives/split-gap-ii-preprint-v1.0.zip) · [Lean source archive](preprints/SPLITGAPII/05_formalization/split-gap-ii-lean-v1.0.zip)
+
+Run `python scripts/verify_preprint.py` from the repository root to verify the edition, archive, finite example and recorded audit. The [audit report](preprints/SPLITGAPII/02_validation/v1.0/AUDIT_RESULT.json) states the scope of the checks.
 
 ### Reproducing the Lean results
 
@@ -13,9 +22,10 @@ cd lean
 lake exe cache get
 lake build SplitGapII SplitGapIIAudit
 lake env lean SplitGapIIAudit.lean
+lake env lean AllAxioms.lean
 ```
 
-The [toolchain](lean/lean-toolchain) selects Lean 4.35.0-rc3. The [Lake manifest](lean/lake-manifest.json) pins Mathlib at `c55e6e786f49471c72fbddbec5415808896aec1e` and locks its transitive dependencies. The [provenance file](lean/PROVENANCE.json) records the revisions of Parts I, V and VI and the local adaptation of the integral lower bound. All project Lean sources are included. The [build record](lean/BUILD.txt) and [axiom output](lean/AXIOMS.txt) accompany the [audit entry point](lean/SplitGapIIAudit.lean).
+The [toolchain](lean/lean-toolchain) selects Lean 4.35.0-rc3. The [Lake manifest](lean/lake-manifest.json) pins Mathlib at `c55e6e786f49471c72fbddbec5415808896aec1e` and locks its transitive dependencies. The [provenance file](lean/PROVENANCE.json) records the revisions of Parts I, V and VI and the local adaptation of the integral lower bound. All project Lean sources are included. The [1.0 build record](preprints/SPLITGAPII/02_validation/v1.0/lean/status.json) and [axiom output](lean/AXIOMS.txt) accompany the [audit entry point](lean/SplitGapIIAudit.lean).
 
 ### Where to check each claim
 

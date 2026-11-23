@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.35.0-rc3",
+  "mathlib": "c55e6e786f49471c72fbddbec5415808896aec1e",
+  "dependency_heads_verified": 9,
+  "basis_commit": "68d353c44d3eb1ac865b529f33804117fb6ed8c3",
+  "successful_lake_jobs": 9004,
+  "compiled_project_sources": 44,
+  "all_theorem_declarations_including_dependencies_and_generated_declarations": 830,
+  "principal_axiom_checks": 25,
+  "axioms_allowed": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "method": "Fresh project build directory. Local dependency paths resolve to the locked commits. Project sources match the archived sources. AllAxioms was run separately on the compiled environment."
+}

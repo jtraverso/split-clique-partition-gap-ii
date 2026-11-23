@@ -1,0 +1,69 @@
+{
+  "math_spans_identical": 488,
+  "numbered_equations_unchanged_from_v02": 11,
+  "numbered_results": 10,
+  "render_inspection": {
+    "split-gap-ii-en": {
+      "pages": 10,
+      "url_targets": [
+        "https://doi.org/10.1017/S0963548320000280",
+        "https://doi.org/10.1017/S0963548397002927",
+        "https://doi.org/10.5281/zenodo.24452724",
+        "https://doi.org/10.6028/jres.069B.013",
+        "https://github.com/jtraverso/berge-matching",
+        "https://github.com/jtraverso/erdos81-colorability-realizability-defects",
+        "https://github.com/jtraverso/erdos81-optimal-clique-partitions",
+        "https://github.com/jtraverso/split-clique-partition-gap",
+        "https://github.com/jtraverso/split-clique-partition-gap-ii",
+        "https://orcid.org/0009-0003-6068-4096",
+        "mailto:jtraverso@gmail.com"
+      ],
+      "printed_reference_urls": 8,
+      "pdf_sha256": "e55ad614eb42f632ca749cdb7d2241e0e11f859316dff6bcd75d7a5ecfb0eed9",
+      "tex_sha256": "00e0b12a583456bcb777a7f101774910ead24fb8c6ab7af3223467746fd6b643"
+    },
+    "split-gap-ii-es": {
+      "pages": 11,
+      "url_targets": [
+        "https://doi.org/10.1017/S0963548320000280",
+        "https://doi.org/10.1017/S0963548397002927",
+        "https://doi.org/10.5281/zenodo.24452724",
+        "https://doi.org/10.6028/jres.069B.013",
+        "https://github.com/jtraverso/berge-matching",
+        "https://github.com/jtraverso/erdos81-colorability-realizability-defects",
+        "https://github.com/jtraverso/erdos81-optimal-clique-partitions",
+        "https://github.com/jtraverso/split-clique-partition-gap",
+        "https://github.com/jtraverso/split-clique-partition-gap-ii",
+        "https://orcid.org/0009-0003-6068-4096",
+        "mailto:jtraverso@gmail.com"
+      ],
+      "printed_reference_urls": 8,
+      "pdf_sha256": "24468987f83b792c1c37920f83dc28dffafae2f69bb0a24735354edc7a38edd6",
+      "tex_sha256": "1fe0b633a77b02817a783a6ecb6633fa2334a310bf254822c1f39863e99df593"
+    },
+    "companion-en": {
+      "pages": 1,
+      "url_targets": [
+        "https://doi.org/10.5281/zenodo.24452724",
+        "https://github.com/jtraverso/split-clique-partition-gap-ii",
+        "https://orcid.org/0009-0003-6068-4096",
+        "mailto:jtraverso@gmail.com"
+      ],
+      "printed_reference_urls": null,
+      "pdf_sha256": "4c819fd62fd99a9ca06272c3ca577765a16d69305775c1720f0043932f31a905",
+      "tex_sha256": "29b02b50c75c05bf5511208272058af35e40b5e3eee4b0230a91c0cc297fa018"
+    },
+    "companion-es": {
+      "pages": 1,
+      "url_targets": [
+        "https://doi.org/10.5281/zenodo.24452724",
+        "https://github.com/jtraverso/split-clique-partition-gap-ii",
+        "https://orcid.org/0009-0003-6068-4096",
+        "mailto:jtraverso@gmail.com"
+      ],
+      "printed_reference_urls": null,
+      "pdf_sha256": "665130574010adad3425c2e10d387f9e8c1c7a879ef073d1d837f9c9778c62a2",
+      "tex_sha256": "61e1ac667fb6cdabb52e6d6e5d0742118e4c03ed6730e750eb4aa86f4c8a2e93"
+    }
+  }
+}

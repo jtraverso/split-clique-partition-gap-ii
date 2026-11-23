@@ -1,0 +1,9 @@
+# Editorial review of version 1.1
+
+The baseline is the private 1.0 revision 685333d90f836dffd8f4e196887c8259d76e2f2f. Both editions retain the eleven numbered equations and original result numbers. Proposition 5a settles the former interval for the deletion coefficient. The twelve-vertex example remains because its second deletion reverses the direction of the gap change. The eighteen-vertex example certifies the two-unit increase and gives equality for the fixed residual with one unassigned pair. Exact integral, primal and dual checks ran with Python optimization enabled. An independent pivot-on-a-pair search confirmed both new integral upper bounds.
+
+Proposition 6a assigns bipartite requests in three disjoint families and excludes the crossing incidences already used at each endpoint before assigning internal padding pairs. Its quadratic count assumes a local deletion budget and preservation of the original designated triangles. The padding count, the tripartition and invariance under adding residual isolated vertices were checked against Part I at ab463d8. The unchanged witnesses have the smaller budget stated in the manuscript.
+
+All 27 pages were rendered and inspected, including both figures and both tables. Each bibliography has nine printed and active URLs. The two texts have the same mathematical expressions in the same order. The guides describe exactly which parts of the new proofs are executable checks and which are Lean declarations. Sparse fractional rounding and the fractional saturation characterization are outside this edition.
+
+The unreleased 1.0 candidate and its evidence are preserved. The 1.1 edition uses the existing DOI reservation for the unpublished deposit. Public access to both the official repository and the DOI should be checked when the author authorizes release.

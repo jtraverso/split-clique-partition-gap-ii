@@ -1,0 +1,46 @@
+{
+  "split-gap-ii-en": {
+    "pages": 12,
+    "pdf_sha256": "8d74222d16575e8a54ded9317d839c05705d83730e20ad5148e8bc305223f18c",
+    "tex_sha256": "695e3fcd41a7c11c83321ffd09280dfae799ba1caf1b361881408de1bd52e660",
+    "printed_reference_urls": [
+      "https://github.com/jtraverso/split-clique-partition-gap",
+      "https://doi.org/10.1017/S0963548397002927",
+      "https://github.com/jtraverso/erdos81-colorability-realizability-defects",
+      "https://github.com/jtraverso/erdos81-optimal-clique-partitions",
+      "https://doi.org/10.6028/jres.069B.013",
+      "https://doi.org/10.1017/S0963548320000280",
+      "https://github.com/jtraverso/berge-matching",
+      "https://github.com/jtraverso/split-clique-partition-gap-ii",
+      "https://doi.org/10.1006/jctb.1995.1011"
+    ]
+  },
+  "split-gap-ii-es": {
+    "pages": 13,
+    "pdf_sha256": "90da05c371b9743789788c07b7c522d855164046301abab311c91728c811107a",
+    "tex_sha256": "c15e8c3705f00469a20d37bbd6ea85dc13f3251c4aa7bcfdd472e98b9406a908",
+    "printed_reference_urls": [
+      "https://github.com/jtraverso/split-clique-partition-gap",
+      "https://doi.org/10.1017/S0963548397002927",
+      "https://github.com/jtraverso/erdos81-colorability-realizability-defects",
+      "https://github.com/jtraverso/erdos81-optimal-clique-partitions",
+      "https://doi.org/10.6028/jres.069B.013",
+      "https://doi.org/10.1017/S0963548320000280",
+      "https://github.com/jtraverso/berge-matching",
+      "https://github.com/jtraverso/split-clique-partition-gap-ii",
+      "https://doi.org/10.1006/jctb.1995.1011"
+    ]
+  },
+  "companion-en": {
+    "pages": 1,
+    "pdf_sha256": "a045eb655c594dc7a48e568d8d14545f09ed55a26a0c937fda19b2bf51a1f627",
+    "tex_sha256": "c1dc28c5c65e1fb696dc1c0d9459860b74e1c29bcdc0a44e787eb30532043553",
+    "printed_reference_urls": []
+  },
+  "companion-es": {
+    "pages": 1,
+    "pdf_sha256": "3ee01bc517909209e831d364e477abbae2858969977b81ab3db37f978cd2555b",
+    "tex_sha256": "d08644751212c520d7247790e7c8d052a20fb44cbac23ddbf969dcc27a02db45",
+    "printed_reference_urls": []
+  }
+}

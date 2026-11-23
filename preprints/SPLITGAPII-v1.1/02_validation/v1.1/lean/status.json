@@ -1,0 +1,18 @@
+{
+  "edition": "1.1",
+  "status": "PASS",
+  "historical_clean_build": "1.0 commit 685333d90f836dffd8f4e196887c8259d76e2f2f",
+  "inherited_source_version": "0.2.0",
+  "rerun": "Both Lake targets and AllAxioms on the pinned project environment; inherited output compared line for line.",
+  "revalidated_inherited_theorem_records": 830,
+  "named_inherited_declarations": 25,
+  "additional_module": "SplitGapII11.lean",
+  "additional_declarations": 2,
+  "registered_new_proofs": [
+    "local_deletion_list_sizes",
+    "single_deletion_gap_jump"
+  ],
+  "scope": "List-capacity arithmetic and gap arithmetic; finite packing optima verified by exact Python, general constructions proved in the paper.",
+  "mathlib": "c55e6e786f49471c72fbddbec5415808896aec1e",
+  "toolchain": "leanprover/lean4:v4.35.0-rc3"
+}

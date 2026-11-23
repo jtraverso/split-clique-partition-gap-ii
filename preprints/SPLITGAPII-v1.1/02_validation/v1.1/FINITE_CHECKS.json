@@ -1,0 +1,40 @@
+{
+  "partition_numbers_12_vertices": [
+    [
+      "10",
+      "10"
+    ],
+    [
+      "11",
+      "10"
+    ],
+    [
+      "11",
+      "11"
+    ]
+  ],
+  "partition_numbers_18_vertices": [
+    [
+      "17",
+      "49/3"
+    ],
+    [
+      "18",
+      "46/3"
+    ]
+  ],
+  "independent_check": "Branch on an available pair: leave it unused or choose one positive block containing it.",
+  "pivot_check": [
+    {
+      "deletion": 0,
+      "independent_integer_optimum": 11,
+      "pivot_states": 2901
+    },
+    {
+      "deletion": 1,
+      "independent_integer_optimum": 11,
+      "pivot_states": 4832
+    }
+  ],
+  "fractional_certificate": "28 edge capacities and 247 dual inequalities per state; rational objectives agree exactly."
+}

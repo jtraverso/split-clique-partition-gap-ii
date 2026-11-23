@@ -1,0 +1,2 @@
+'QuadraticExteriorPalomar.local_deletion_list_sizes' depends on axioms: [propext, Quot.sound]
+'QuadraticExteriorPalomar.single_deletion_gap_jump' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,451 @@
+⚠ [1199/1229] Replayed GapExtremal.Defs
+warning: GapExtremal/Defs.lean:39:23: Variable name `u` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _u
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: GapExtremal/Defs.lean:39:28: Variable name `v` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _v
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: GapExtremal/Defs.lean:41:0: automatically included section variable(s) unused in theorem `GapExtremal.mem_cliqueSets_iff_isClq`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8963/9004] Replayed GapExtremal.Completion
+warning: GapExtremal/Completion.lean:36:0: automatically included section variable(s) unused in theorem `GapExtremal.isClq_pair`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Completion.lean:46:0: automatically included section variable(s) unused in theorem `GapExtremal.mem_cliques`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Completion.lean:50:0: automatically included section variable(s) unused in theorem `GapExtremal.isClq_of_sub`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Completion.lean:53:0: automatically included section variable(s) unused in theorem `GapExtremal.pair_of_card_two`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Completion.lean:134:56: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: GapExtremal/Completion.lean:155:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: GapExtremal/Completion.lean:159:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: GapExtremal/Completion.lean:183:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: GapExtremal/Completion.lean:210:0: automatically included section variable(s) unused in theorem `GapExtremal.completion_card_le`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8964/9004] Replayed GapExtremal.Residual
+warning: GapExtremal/Residual.lean:198:37: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [8967/9004] Replayed PaperV.Core
+warning: PaperV/Core.lean:24:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/Core.lean:62:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/Core.lean:58:0: automatically included section variable(s) unused in theorem `PaperV.defectSet_nonempty`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/Core.lean:58:56: Variable name `hq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8968/9004] Replayed PaperV.ConflictGraph
+warning: PaperV/ConflictGraph.lean:52:10: `Symmetric` has been deprecated: Use `Std.Symm` instead
+
+Hint: Replace the deprecated name:
+  S̵y̵m̵m̵e̵t̵r̵i̵c̵S̲t̲d̲.̲S̲y̲m̲m̲
+warning: PaperV/ConflictGraph.lean:131:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/ConflictGraph.lean:189:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/ConflictGraph.lean:195:55: Variable name `hX` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hX
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8969/9004] Replayed PaperV.UnitBoundaryCompletion
+warning: PaperV/UnitBoundaryCompletion.lean:62:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.le_packOpt`:
+  [DecidableEq α]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:68:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.packOpt_le`:
+  [DecidableEq α]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:89:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.le_nuAvoid`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:95:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.exists_nuAvoid`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:125:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.Z_subset`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:127:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.mem_Z`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:143:6: Variable name `r` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _r
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/UnitBoundaryCompletion.lean:150:31: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+
+Hint: Replace the deprecated name:
+  Set.mem_s̲diff
+warning: PaperV/UnitBoundaryCompletion.lean:250:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/UnitBoundaryCompletion.lean:459:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [8972/9004] Replayed GapExtremal.GlobalLemmas
+warning: GapExtremal/GlobalLemmas.lean:53:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: GapExtremal/GlobalLemmas.lean:53:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8973/9004] Replayed GapExtremal.Global
+warning: GapExtremal/Global.lean:47:0: automatically included section variable(s) unused in theorem `GapExtremal.D_singleton_le_one`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Global.lean:92:57: This simp argument is unused:
+  hAdef
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GapExtremal/Global.lean:209:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [8977/9004] Replayed PaperV.WeightedTransfer
+warning: PaperV/WeightedTransfer.lean:60:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/WeightedTransfer.lean:98:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8980/9004] Replayed PaperV.UnitBoundaryWitnesses
+warning: PaperV/UnitBoundaryWitnesses.lean:90:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.packOpt_eq_of`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryWitnesses.lean:98:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.nuAvoid_eq_of`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8982/9004] Replayed QuadraticExteriorPalomar.Retention
+warning: QuadraticExteriorPalomar/Retention.lean:102:10: This simp argument is unused:
+  nsmul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8983/9004] Replayed GapExtremal.Bridge
+warning: GapExtremal/Bridge.lean:46:0: automatically included section variable(s) unused in theorem `GapExtremal.card_adj_add_j`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Bridge.lean:132:8: automatically included section variable(s) unused in theorem `GapExtremal.hostGraph_inl_inl`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype H]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype H] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Bridge.lean:133:8: automatically included section variable(s) unused in theorem `GapExtremal.hostGraph_inl_inr`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype H]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype H] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Bridge.lean:135:8: automatically included section variable(s) unused in theorem `GapExtremal.hostGraph_inr_inl`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype H]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype H] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Bridge.lean:137:8: automatically included section variable(s) unused in theorem `GapExtremal.hostGraph_inr_inr`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype H]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype H] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Bridge.lean:271:0: automatically included section variable(s) unused in theorem `GapExtremal.two_of_mem_jPairs`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Bridge.lean:274:0: automatically included section variable(s) unused in theorem `GapExtremal.nonadj_of_mem_jPairs`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Bridge.lean:305:0: automatically included section variable(s) unused in theorem `GapExtremal.host_of_ends`:
+  [Fintype H]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype H] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GapExtremal/Bridge.lean:327:41: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: GapExtremal/Bridge.lean:345:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: GapExtremal/Bridge.lean:349:13: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: GapExtremal/Bridge.lean:361:38: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: GapExtremal/Bridge.lean:364:0: automatically included section variable(s) unused in theorem `GapExtremal.load_core`:
+  [Fintype H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8988/9004] Replayed PaperV.HostRealizer
+warning: PaperV/HostRealizer.lean:101:0: automatically included section variable(s) unused in theorem `PaperV.Host.csFeasible_hostCS_of_properOn`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/HostRealizer.lean:107:0: automatically included section variable(s) unused in theorem `PaperV.Host.base_injOn_of_csFeasible`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8992/9004] Replayed QuadraticExteriorPalomar.SplitCost
+warning: QuadraticExteriorPalomar/SplitCost.lean:62:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: QuadraticExteriorPalomar/SplitCost.lean:62:32: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: QuadraticExteriorPalomar/SplitCost.lean:64:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: QuadraticExteriorPalomar/SplitCost.lean:64:32: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [8993/9004] Replayed QuadraticExteriorPalomar.SplitBound
+warning: QuadraticExteriorPalomar/SplitBound.lean:220:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8994/9004] Replayed QuadraticExteriorPalomar.MarkedLists
+warning: QuadraticExteriorPalomar/MarkedLists.lean:24:8: automatically included section variable(s) unused in theorem `_private.QuadraticExteriorPalomar.MarkedLists.0.QuadraticExteriorPalomar.pair_injective`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8997/9004] Replayed QuadraticExteriorPalomar.SeriesGap
+warning: QuadraticExteriorPalomar/SeriesGap.lean:91:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8999/9004] Replayed QuadraticExteriorPalomar.WeightedRecovery
+warning: QuadraticExteriorPalomar/WeightedRecovery.lean:51:65: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: QuadraticExteriorPalomar/WeightedRecovery.lean:55:27: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: QuadraticExteriorPalomar/WeightedRecovery.lean:58:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: QuadraticExteriorPalomar/WeightedRecovery.lean:60:55: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9000/9004] Replayed QuadraticExteriorPalomar.Redundancy
+warning: QuadraticExteriorPalomar/Redundancy.lean:54:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: QuadraticExteriorPalomar/Redundancy.lean:57:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: QuadraticExteriorPalomar/Redundancy.lean:58:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: QuadraticExteriorPalomar/Redundancy.lean:59:39: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+ℹ [9003/9004] Replayed SplitGapIIAudit
+info: SplitGapIIAudit.lean:5:0: 'QuadraticExteriorPalomar.cp_eq_series_cp' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:6:0: 'QuadraticExteriorPalomar.gap_change_of_induced_restriction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:7:0: 'QuadraticExteriorPalomar.gap_change_le_removed_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:8:0: 'QuadraticExteriorPalomar.gap_change_of_dropped_hosts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:9:0: 'QuadraticExteriorPalomar.partial_host_score_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:10:0: 'QuadraticExteriorPalomar.complete_partial_assignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:11:0: 'QuadraticExteriorPalomar.gap_ge_of_partial_assignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:12:0: 'QuadraticExteriorPalomar.gap_ge_after_cross_deletions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:13:0: 'QuadraticExteriorPalomar.residual_host_realizer_of_deficit_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SplitGapIIAudit.lean:14:0: 'QuadraticExteriorPalomar.series_gap_le_of_deficit_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:15:0: 'QuadraticExteriorPalomar.series_gap_le_of_sparse_exceptions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:16:0: 'QuadraticExteriorPalomar.frac_eq_residualSup' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:17:0: 'QuadraticExteriorPalomar.cp_le_of_residual_pack' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:18:0: 'QuadraticExteriorPalomar.gap_eq_residual_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:19:0: 'QuadraticExteriorPalomar.marked_assignment_of_deficit_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SplitGapIIAudit.lean:20:0: 'QuadraticExteriorPalomar.gap_stability_of_partial_assignment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SplitGapIIAudit.lean:21:0: 'QuadraticExteriorPalomar.gap_stability_of_marked_lists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:22:0: 'QuadraticExteriorPalomar.gap_stability_after_cross_deletions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SplitGapIIAudit.lean:23:0: 'QuadraticExteriorPalomar.partial_savings_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:24:0: 'QuadraticExteriorPalomar.residual_gap_edit_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:25:0: 'QuadraticExteriorPalomar.assignment_of_vertex_budgets' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:26:0: 'QuadraticExteriorPalomar.series_gap_le_of_vertex_excess' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:27:0: 'QuadraticExteriorPalomar.gap_stability_of_residual_loads' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:28:0: 'QuadraticExteriorPalomar.gap_of_matching_mixtures' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SplitGapIIAudit.lean:29:0: 'QuadraticExteriorPalomar.miss_product_le_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (9004 jobs).

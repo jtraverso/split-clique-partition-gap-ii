@@ -1,0 +1,60 @@
+\documentclass[spanish,10pt,a4paper]{article}
+\usepackage[margin=0.82in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\newlength{\LeanCharWidth}
+\usepackage{amsmath,amssymb}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{microtype,parskip}
+\usepackage{graphicx,float,caption}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\AtBeginDocument{\renewcommand{\figurename}{Figura}}
+\clubpenalty=10000\widowpenalty=10000
+\DeclareMathSizes{9}{10}{7}{5}
+\hypersetup{pdflang={es-CL},colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\hypersetup{pdftitle={Guía Lean de Estabilidad de la transferencia mediante anfitriones},pdfauthor={Juan Pablo Traverso Gianini}}
+\title{Guía Lean de Estabilidad de la transferencia mediante anfitriones}
+\author{Juan Pablo Traverso Gianini\\\small Investigador independiente, Santiago, Chile\\\small\href{mailto:jtraverso@gmail.com}{jtraverso@gmail.com}\quad\href{https://orcid.org/0009-0003-6068-4096}{ORCID 0009-0003-6068-4096}}
+\date{Preprint 1.1 \enspace · \enspace 23 de noviembre de 2026}
+\begin{document}\raggedbottom\maketitle\vspace{-1.5em}
+\noindent\textbf{DOI reservado:} \url{https://doi.org/10.5281/zenodo.24452724}\\
+\textbf{Repositorio oficial:} \url{https://github.com/jtraverso/split-clique-partition-gap-ii}
+\subsection{Alcance de los enunciados formales}\label{alcance-de-los-enunciados-formales}
+
+El preprint 1.1 usa los números de partición en cliques enteros y fraccionales sin restricción de orden de la Parte I. El desarrollo Lean demuestra en el grafo split original la estimación bilateral (1) del Teorema 1. Recibe un grafo residual, vecindades de anfitriones independientes en él y una asignación parcial propia sobre pares del núcleo. La cantidad de pares sin asignar es el cardinal del complemento de esta asignación dentro de los pares requeridos.
+
+El Lema 4 carga cada sentido de la desigualdad a la capacidad libre del óptimo residual correspondiente. El Corolario 5 admite borrados arbitrarios de aristas cruzadas partiendo de una asignación completa, incluso cuando algún anfitrión queda aislado. La Proposición 6 acota el cambio de la brecha residual al modificar aristas sobre un núcleo fijo. Para la Proposición 7, la cota compilada usa el umbral del núcleo completo. El Corolario 8 acota la brecha sin restricción de orden por el doble de la suma de los excesos en los vértices. En el Teorema 9 la prueba formal parte de descomposiciones convexas finitas en emparejamientos admisibles y demuestra la cota de producto sin pesos y su comparación exponencial. El manuscrito obtiene esas descomposiciones mediante la caracterización del politopo de Edmonds.
+
+\subsection{Reproducción}\label{reproducciuxf3n}
+
+El repositorio oficial es \url{https://github.com/jtraverso/split-clique-partition-gap-ii}. Su README identifica las declaraciones Lean correspondientes. El archivo de fuentes distribuido con esta guía contiene el paquete en el directorio \texttt{lean}. Desde ese directorio se ejecutan los siguientes comandos con elan. La primera instalación requiere acceso a la red.
+
+\begin{verbatim}
+lake exe cache get
+lake build SplitGapII SplitGapIIAudit
+lake env lean SplitGapIIAudit.lean
+lake env lean AllAxioms.lean
+lake env lean SplitGapII11.lean
+\end{verbatim}
+
+El paquete fija Lean 4.35.0-rc3 y la revisión de Mathlib indicada en el manifiesto de Lake. La primera auditoría imprime los axiomas de 25 declaraciones identificadas por su nombre. La segunda recorre los módulos importados del proyecto y rechaza todo teorema que use axiomas fuera de la extensionalidad proposicional, la elección clásica y la validez del cociente. El directorio de validación recoge la compilación limpia y la lista exhaustiva.
+
+El archivo adicional SplitGapII11.lean comprueba las dos desigualdades de tamaños de listas y la aritmética del salto de dos unidades. Los dos programas exactos de la sección 3 certifican los óptimos de las tablas. Las demostraciones combinatorias de las proposiciones 5a y 6a, el umbral general por listas y las aplicaciones asintóticas se dan en el manuscrito.
+
+\end{document}

@@ -1,0 +1,18 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "SplitGapIIRegistry.gap_stability_of_partial_assignment",
+    "SplitGapIIRegistry.gap_stability_after_cross_deletions",
+    "SplitGapIIRegistry.series_gap_le_of_vertex_excess"
+  ],
+  "definition_names": [
+    "SplitGapIIRegistry.integralScore"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

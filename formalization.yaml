@@ -1,0 +1,68 @@
+version: "v0.4"
+project:
+  name: "Stability of the Clique Partition Gap in Split Graphs"
+  description: >-
+    In a finite split graph whose host neighborhoods are independent in the residual core graph,
+    a proper assignment missing L required pairs realizes the residual integral-fractional packing
+    gap to within 2L. Deleting q crossing edges from a complete assignment changes the gap by at
+    most 2q. For a split presentation with core size c and at least 2c hosts, the gap is at most
+    twice the sum of endpoint omissions in excess of floor(c/2).
+  authors: ["Juan Pablo Traverso Gianini"]
+  responsible_maintainers: ["Juan Pablo Traverso Gianini"]
+  license: Apache-2.0
+classification:
+  arxiv: [math.CO]
+  msc2020: ["05C70", "05C15"]
+sources:
+  - title: "Stability of the Clique Partition Gap in Split Graphs"
+    authors: ["Juan Pablo Traverso Gianini"]
+    id: "doi:10.5281/zenodo.24452724"
+    type: preprint
+    location: "Split Gap II, preprint 1.0, Theorem 1, Corollary 5 and Corollary 8 (equation 10)"
+    relationship: formalizes
+    author_endorsement: participated
+  - title: "Nearly Quadratic Additive Gaps for Edge-Clique Partitions of Split Graphs"
+    authors: ["Juan Pablo Traverso Gianini"]
+    id: "doi:10.5281/zenodo.24408988"
+    type: preprint
+    location: "Split Gap I, Lemma 2.1"
+    relationship: background
+related_formalizations:
+  - id: "https://github.com/jtraverso/split-clique-partition-gap/tree/ab463d8f4841101ba5c28047def8553b0c23249f"
+    relationship: builds-on
+    note: "Core packing scores and host-transfer definitions."
+  - id: "https://github.com/jtraverso/erdos81-colorability-realizability-defects/tree/0c2f7dff52e5c578f39191c4905dd12248e7bb9a"
+    relationship: builds-on
+    note: "Host realizability."
+  - id: "https://github.com/jtraverso/erdos81-optimal-clique-partitions/tree/719e39baf9d0e356a13f6bfe36b60b4ad5e910d6"
+    relationship: builds-on
+    note: "List edge coloring."
+status:
+  scope: "Theorem 1, Corollary 5 and Corollary 8 (equation 10). The finite sharpness certificate and the protected padding construction are outside these three compared declarations."
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+automation:
+  methods:
+    - method: agent
+      models: ["ChatGPT/Codex (OpenAI)"]
+      framework: Codex
+      tool_setup: "Prepared the comparison interface and registry package using Lean and the released proof sources."
+      cost: {wall_time: "not tracked", spend_usd: "not tracked", hardware: "local machine"}
+      prompting_notes: "Prepared under the direction of the author."
+  spend_usd: "not tracked"
+fidelity:
+  divergences: >-
+    The fractional optimum is expressed as a supremum. The integral supremum in the interface
+    equals the attained maximum in the proof library. Corollary 8 accepts any endpoint-wise upper
+    bounds on the excess; taking the positive part of each excess yields the stated formula.
+review:
+  status: agent-reviewed
+  reviewers: ["OpenAI Codex"]
+  notes: "Comparison of the selected declarations with the published sources."
+alignment:
+  namespace: SplitGapIIRegistry
+  statements:
+    - {source: "Theorem 1", lean: SplitGapIIRegistry.gap_stability_of_partial_assignment, module: Challenge, status: proved}
+    - {source: "Corollary 5", lean: SplitGapIIRegistry.gap_stability_after_cross_deletions, module: Challenge, status: proved}
+    - {source: "Corollary 8, equation (10)", lean: SplitGapIIRegistry.series_gap_le_of_vertex_excess, module: Challenge, status: proved}

@@ -92,9 +92,18 @@ def hostGraph (N : H → Finset V) : SimpleGraph (V ⊕ H) where
     | .inl x, .inr h => x ∈ N h
     | .inr h, .inl x => x ∈ N h
     | .inr _, .inr _ => False
-  symm := ⟨fun a b h => by
-    rcases a with x | h <;> rcases b with y | h' <;> simp_all [eq_comm]⟩
-  loopless := ⟨fun a h => by rcases a with x | h <;> simp_all⟩
+  symm := ⟨by
+    intro a b hab
+    cases a <;> cases b
+    · exact Ne.symm hab
+    · exact hab
+    · exact hab
+    · exact hab⟩
+  loopless := ⟨by
+    intro a ha
+    cases a with
+    | inl _ => exact ha rfl
+    | inr _ => exact ha⟩
 
 /-- A fractional residual packing on the core (capacity 1 on every pair). -/
 structure ResPack (y : Finset V → ℝ) : Prop where

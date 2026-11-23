@@ -21,4 +21,4 @@ lake exe cache get
 lake build Challenge Solution
 ```
 
-`Challenge.lean` gives the definitions and three statement placeholders. `Solution.lean` proves the same statements using the published sources. Its auxiliary lemma identifies the supremum of the integral scores with the score of an optimal packing. The imported proof modules are copied from the published Lean tree. `PROVENANCE.json` reproduces the provenance of the full upstream freeze, including modules outside the three statements.
+`Challenge.lean` gives the definitions and three statement placeholders. `Solution.lean` proves the same statements using the published sources. Its auxiliary lemma identifies the supremum of the integral scores with the score of an optimal packing. In `GapExtremal/Bridge.lean` the symmetry and looplessness of the split graph are proved by explicit case analysis, with the same proof terms as in the comparison interface. `PROVENANCE.json` reproduces the provenance of the full upstream freeze, including modules outside the three statements.

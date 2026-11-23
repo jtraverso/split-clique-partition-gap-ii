@@ -51,7 +51,7 @@ def main():
         check(doc.splitlines()[0][2:] == index["title_"+lang] and DOI in doc and URL in doc, lang+" title and identifiers")
         check(re.findall(r"\\tag\{(\d+)\}",doc)==list(map(str,range(1,12))),lang+" equation numbering")
         check(re.findall(r"^\*\*(?:Theorem|Lemma|Corollary|Proposition|Teorema|Lema|Corolario|Proposición) (\d+[a-z]?)",doc,re.M)=="1 2 3 4 5 5a 6 6a 7 8 9 10".split(),lang+" theorem numbering")
-        check(re.findall(r"^\[(\d+)\] ",doc,re.M)==list(map(str,range(1,10))),lang+" bibliography numbering")
+        check(re.findall(r"^\[(\d+)\] ",doc,re.M)==list(map(str,range(1,15))),lang+" bibliography numbering")
     docs = [d.replace(r"\text{ahorro total}",r"\text{total saving}").replace("$5000$","$5{,}000$") for d in docs]
     for d in docs:
         check("[1]" in d.split("## 1.")[0] and "10.5281/zenodo.24408988" in d, "Part I attribution")
@@ -69,7 +69,7 @@ def main():
         for ext in ("pdf","tex"):
             check(digest((ED/folder/(stem+"."+ext)).read_bytes()) == record[ext+"_sha256"],stem+" "+ext)
         if folder == "01_manuscript":
-            check(len(record["printed_reference_urls"]) == 9,stem+" printed references")
+            check(len(record["printed_reference_urls"]) == 15,stem+" printed references")
 
     expected=data(LEAN/"SOURCE_HASHES.json")
     check(digest((ED/"05_formalization/split-gap-ii-lean-v1.0.zip").read_bytes())=="fb167eed7405bc79ab3680ab6207a6911415448fd48786db690291034c19c074","unchanged reviewed Lean freeze")

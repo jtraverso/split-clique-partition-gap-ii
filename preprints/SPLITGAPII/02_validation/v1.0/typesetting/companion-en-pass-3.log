@@ -2,7 +2,7 @@ note: using only cached resource files
 note: Running TeX ...
 note: Rerunning TeX because "companion-en.aux" changed ...
 note: Running xdvipdfmx ...
-note: Writing `[audit-work]\series-10-build\05_formalization\companion-en.log` (25.52734375 KiB)
-note: Writing `[audit-work]\series-10-build\05_formalization\companion-en.pdf` (20.015625 KiB)
+note: Writing `[audit-work]\public-10-build\05_formalization\companion-en.log` (25.52734375 KiB)
+note: Writing `[audit-work]\public-10-build\05_formalization\companion-en.pdf` (19.9248046875 KiB)
 note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)
 Fontconfig error: Cannot load default config file: No such file: (null)

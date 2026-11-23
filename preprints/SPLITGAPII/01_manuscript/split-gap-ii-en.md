@@ -9,7 +9,7 @@ Independent researcher, Santiago, Chile<br>
 
 *Preprint 1.0 · November 23, 2026*
 
-Reserved DOI <https://doi.org/10.5281/zenodo.24452724>  
+DOI <https://doi.org/10.5281/zenodo.24452724>  
 Official series repository <https://github.com/jtraverso/split-clique-partition-gap>  
 Paper II repository <https://github.com/jtraverso/split-clique-partition-gap-ii>
 
@@ -27,7 +27,11 @@ $$
 \Delta(G)=\operatorname{cp}(G)-\operatorname{cp}^{\ast}(G).
 $$
 
-Every integral partition is feasible for the fractional problem, so $\Delta(G)\ge0$. The split graphs in the first paper [1] have a clique $V$, called the core, and an independent set $H$. A vertex $h\in H$ is a *host*, with neighborhood $N_h\subseteq V$. In that construction, a graph $B$ on $V$ determines which core pairs require a host. Every such pair $uv$ has a designated host $h$ for which $huv$ is a triangle. If the edge $hu$ is deleted, the pair $uv$ is still present in the core, but the designated triangle is gone. The question is how much of the original gap survives.
+Every integral partition is feasible for the fractional problem, so $\Delta(G)\ge0$. Balogh, He, Krueger, Nguyen and Wigal [10, Theorem 1.10] prove that $\Delta(G)=o(n^2)$ for graphs on $n$ vertices. Their decomposition theorem gives this bound on taking $t=2$ and assigning cost one to every clique.
+
+The split graphs in the first paper [1] have a clique $V$, called the core, and an independent set $H$. A vertex $h\in H$ is a *host*, with neighborhood $N_h\subseteq V$. In that construction, a graph $B$ on $V$ determines which core pairs require a host. Every such pair $uv$ has a designated host $h$ for which $huv$ is a triangle. If the edge $hu$ is deleted, the pair $uv$ is still present in the core, but the designated triangle is gone. The question is how much of the original gap survives.
+
+Chen, Erdős and Ordman [11] assign matchings in the core to vertices of the independent set to bound the integral partition number. When the crossing edges are all present, Chahua and Gutierrez [14, Lemma 2] use each assigned vertex to extend its matching to edge-disjoint triangles.
 
 Fix a graph $B$ on $V$ and put $J=\binom{V}{2}\setminus E(B)$. All pairs of $V$ are edges of the split graph $G$, including the pairs in $J$. For $Q\subseteq V$ with $|Q|\ge2$, let $e_B(Q)$ be the number of edges of $B$ with both ends in $Q$, and give $Q$ the score
 
@@ -153,6 +157,8 @@ In particular, equality $\Delta(G)=\Phi(B)$ still holds if an integral optimum a
 
 ## 3. Deleting crossing edges from a witness
 
+In their estimate for the integral partition number, Chen, Erdős and Ordman [11] count the designated triangles lost to missing crossing edges. Here the surviving triangles give a partial assignment. Theorem 1 then controls the change in the difference of the two partition numbers.
+
 **Corollary 5.** Let $G$ have a complete assignment as in (2). If $G'$ is obtained from $G$ by deleting $q$ edges between $V$ and $H$, then
 
 $$
@@ -254,9 +260,11 @@ of size at least $k$. In a proper coloring from these lists, the pairs receiving
 
 Häggkvist and Janssen [2, Theorem 1.1] show that lists of size $c$ suffice for $K_c$. They also suffice for $J$, since arbitrary lists of that size on the other core pairs extend the instance to $K_c$. If $J$ has maximum degree $d\ge1$, an edge meets at most $2d-2$ other edges. Coloring in any order from lists of size $2d-1$ therefore always leaves a color available. Either argument applies, giving $k=\min\{c,2d-1\}$. For a nonempty matching one may take $k=1$. For empty $J$ the assignment is complete and Theorem 1 applies directly.
 
-The graphs $D_t^{(k)}$ are nested. With $d_{\max}=\max_{e\in J}d_k(e)$ (zero for empty $J$), at most $d_{\max}$ of them have edges, so the bound in (8) is at most $2d_{\max}\nu(D_1^{(k)})$ for $k\ge1$. Small vertex covers give convenient certificates for these matching numbers. For example, if all deficient pairs meet the same two vertices, each level contributes at most two. More generally, by the Tutte–Berge formula [7], any $S\subseteq V$ certifies the upper bound $(c+|S|-o(D_t^{(k)}-S))/2$, where $o$ counts odd components, and some $S$ attains equality.
+The graphs $D_t^{(k)}$ are nested. With $d_{\max}=\max_{e\in J}d_k(e)$ (zero for empty $J$), at most $d_{\max}$ of them have edges, so the bound in (8) is at most $2d_{\max}\nu(D_1^{(k)})$ for $k\ge1$. Small vertex covers give convenient certificates for these matching numbers. For example, if all deficient pairs meet the same two vertices, each level contributes at most two. More generally, by the Tutte–Berge formula [13, Chapter 3] (formalized in [7]), any $S\subseteq V$ certifies the upper bound $(c+|S|-o(D_t^{(k)}-S))/2$, where $o$ counts odd components, and some $S$ attains equality.
 
 In the next corollary we take $k=c$ and abbreviate $D_t^{(c)}$ to $D_t(J)$.
+
+Okechukwu [12, Lemma 4.1] uses lists of common exterior neighbors to extend core edges to triangles. His proof reserves separate palettes and applies Galvin’s theorem between two halves of the core. The following bound measures how the missing incidences are distributed among individual core vertices.
 
 **Corollary 8.** For every split presentation with core $V$, put $J=\binom{V}{2}$ and form the graphs $D_t(J)$ from the given neighborhoods. Then
 
@@ -359,7 +367,7 @@ The author remains responsible for the arguments, citations, code and presentati
 
 ## References
 
-[1] J. P. Traverso Gianini, *Nearly Quadratic Additive Gaps for Edge-Clique Partitions of Split Graphs*, preprint 1.0 (2026), Theorem 1.1 and Lemma 2.1. DOI 10.5281/zenodo.24408988. <https://github.com/jtraverso/split-clique-partition-gap>
+[1] J. P. Traverso Gianini, *Nearly Quadratic Additive Gaps for Edge-Clique Partitions of Split Graphs*, preprint 1.0 (2026), Theorem 1.1 and Lemma 2.1. <https://doi.org/10.5281/zenodo.24408988> · <https://github.com/jtraverso/split-clique-partition-gap>
 
 [2] R. Häggkvist and J. Janssen, *New bounds on the list-chromatic index of the complete graph and other simple graphs*, Combinatorics, Probability and Computing **6** (1997), 295–313, Theorem 1.1. <https://doi.org/10.1017/S0963548397002927>
 
@@ -376,3 +384,13 @@ The author remains responsible for the arguments, citations, code and presentati
 [8] J. P. Traverso Gianini, *Split Gap II*, source code, build instructions and exact finite examples. <https://github.com/jtraverso/split-clique-partition-gap-ii>
 
 [9] F. Galvin, *The List Chromatic Index of a Bipartite Multigraph*, Journal of Combinatorial Theory, Series B **63** (1995), 153–158. <https://doi.org/10.1006/jctb.1995.1011>
+
+[10] J. Balogh, J. He, R. A. Krueger, T. Nguyen and M. C. Wigal, *Clique covers and decompositions of cliques of graphs*, Advances in Combinatorics **2026** (2026), Paper No. 9, Theorem 1.10. <https://doi.org/10.19086/aic/2026.9>
+
+[11] G.-T. Chen, P. Erdős and E. T. Ordman, *Clique partitions of split graphs*, in *Combinatorics, Graph Theory, Algorithms and Applications* (Beijing, 1993), World Scientific, 1994, 21–30. <https://ordman.net/MathResearch/CEOClique_Parts.pdf>
+
+[12] O. Okechukwu, *Clique partitions and bounded simplicial defect*, arXiv:2609.20871 (2026), Lemma 4.1. <https://arxiv.org/abs/2609.20871>
+
+[13] L. Lovász and M. D. Plummer, *Matching Theory*, AMS Chelsea Publishing, 2009, Chapter 3. <https://doi.org/10.1090/chel/367>
+
+[14] L. Chahua and J. Gutierrez, *On Tuza’s conjecture in dense graphs*, arXiv:2405.11409 (2024), Lemma 2. <https://arxiv.org/abs/2405.11409>

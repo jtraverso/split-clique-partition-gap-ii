@@ -1,5 +1,5 @@
 {
-  "manuscript_math_spans": 616,
+  "manuscript_math_spans": 619,
   "normalized_localizations": [
     "total saving / ahorro total",
     "5,000 / 5000"
@@ -7,7 +7,7 @@
   "ledger_math_spans": 97,
   "numbered_equations_unchanged_from_cdd5a2a": 11,
   "numbered_results": 12,
-  "bibliographic_entries_per_language": 9,
+  "bibliographic_entries_per_language": 14,
   "language_of_record": "en",
   "pdf_geometry_and_visible_urls": "PDF_QA.json"
 }

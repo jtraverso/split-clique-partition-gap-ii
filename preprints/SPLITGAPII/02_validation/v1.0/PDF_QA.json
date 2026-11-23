@@ -1,9 +1,10 @@
 {
   "split-gap-ii-en": {
-    "pages": 12,
-    "pdf_sha256": "9d2b93d888fe615ea7269fc6e494db0ef173aacfdfa5bd5dbdcf7b93bc469146",
-    "tex_sha256": "c97567088190fabfce50b5894197818b4c5ccb5c5965c9462cd78713c219f2ea",
+    "pages": 13,
+    "pdf_sha256": "0298cf0f4ba00b482cfe7053869658bdabe63853cfacb574fce820434eca9ac7",
+    "tex_sha256": "0e0bb299770422cca4cecb1e64ca68e1049e114ccf8f95eb36316e7e60d8c873",
     "printed_reference_urls": [
+      "https://doi.org/10.5281/zenodo.24408988",
       "https://github.com/jtraverso/split-clique-partition-gap",
       "https://doi.org/10.1017/S0963548397002927",
       "https://github.com/jtraverso/erdos81-colorability-realizability-defects",
@@ -12,7 +13,12 @@
       "https://doi.org/10.1017/S0963548320000280",
       "https://github.com/jtraverso/berge-matching",
       "https://github.com/jtraverso/split-clique-partition-gap-ii",
-      "https://doi.org/10.1006/jctb.1995.1011"
+      "https://doi.org/10.1006/jctb.1995.1011",
+      "https://doi.org/10.19086/aic/2026.9",
+      "https://ordman.net/MathResearch/CEOClique_Parts.pdf",
+      "https://arxiv.org/abs/2609.20871",
+      "https://doi.org/10.1090/chel/367",
+      "https://arxiv.org/abs/2405.11409"
     ],
     "title_page_repositories": [
       "https://github.com/jtraverso/split-clique-partition-gap",
@@ -20,10 +26,11 @@
     ]
   },
   "split-gap-ii-es": {
-    "pages": 13,
-    "pdf_sha256": "14d71c39697f8404468a6eaa884d6ee22c93b5d1092e35fc9ef4f669998f60ed",
-    "tex_sha256": "c993899bab5375699233430ac46079db890e7a141dc0dcdd82d93f380e2f72f6",
+    "pages": 14,
+    "pdf_sha256": "eef56a1f312cd37d59c1155129ab4d2fc942a241d0a6c23479b8fa7391717190",
+    "tex_sha256": "0c85277dc32d42db6f26ab009c9ddee2510d874962d2dc07952a8f3be7239671",
     "printed_reference_urls": [
+      "https://doi.org/10.5281/zenodo.24408988",
       "https://github.com/jtraverso/split-clique-partition-gap",
       "https://doi.org/10.1017/S0963548397002927",
       "https://github.com/jtraverso/erdos81-colorability-realizability-defects",
@@ -32,7 +39,12 @@
       "https://doi.org/10.1017/S0963548320000280",
       "https://github.com/jtraverso/berge-matching",
       "https://github.com/jtraverso/split-clique-partition-gap-ii",
-      "https://doi.org/10.1006/jctb.1995.1011"
+      "https://doi.org/10.1006/jctb.1995.1011",
+      "https://doi.org/10.19086/aic/2026.9",
+      "https://ordman.net/MathResearch/CEOClique_Parts.pdf",
+      "https://arxiv.org/abs/2609.20871",
+      "https://doi.org/10.1090/chel/367",
+      "https://arxiv.org/abs/2405.11409"
     ],
     "title_page_repositories": [
       "https://github.com/jtraverso/split-clique-partition-gap",
@@ -41,8 +53,8 @@
   },
   "companion-en": {
     "pages": 1,
-    "pdf_sha256": "4928b3948f709c027fac83ab1c0e51465d91b9e11a7c22ee53f7a54d81adbda8",
-    "tex_sha256": "2b93dcf94fcf5de0f99ba2bda4e83df17249029b614b35877a658b22cd182f07",
+    "pdf_sha256": "ea268f8375a5217fe9dde2d91474ee3c54a3ce19d51c5ce1f1ec2190c52388f1",
+    "tex_sha256": "489e061348f62f3fb8a0d36c1f6d06d2e35528e05fc55cec92fa289d9cfeb802",
     "printed_reference_urls": [],
     "title_page_repositories": [
       "https://github.com/jtraverso/split-clique-partition-gap",
@@ -51,8 +63,8 @@
   },
   "companion-es": {
     "pages": 1,
-    "pdf_sha256": "6c2a6cee4c71ae749d939162351a254b6941350b14bee2a763650ec7ffdc5891",
-    "tex_sha256": "dfbfe4aeaebd2c87b57898414aac761d88c3ef0046a2f62784c90bf927a85f4f",
+    "pdf_sha256": "5b948bf239fe67cd4c9d1b78e4892cd569f01228bfc8cb4af9e05ed43e9e2a50",
+    "tex_sha256": "add85dd7f0783c8f555ba4f3b0c54bae15422f823a31a406983cb065e32c1d53",
     "printed_reference_urls": [],
     "title_page_repositories": [
       "https://github.com/jtraverso/split-clique-partition-gap",
@@ -61,8 +73,8 @@
   },
   "ledger-en": {
     "pages": 3,
-    "pdf_sha256": "264ba5da97f36824d71f4f50580e90b3984d5edb3583ffd5149fef00c592c0fb",
-    "tex_sha256": "1cabbad609c15e64707a3d138f2ff2bd61872e619add1f5f24363bdaba8295d9",
+    "pdf_sha256": "d4cfccef9bbf93896a3411de9a3015993469da8e9c6e8bfbf6ca7b44ced5e366",
+    "tex_sha256": "99a9b859c9613f168ca976708cb3c6417c23a4825987b6d95828c3af22191993",
     "printed_reference_urls": [],
     "title_page_repositories": [
       "https://github.com/jtraverso/split-clique-partition-gap",
@@ -71,8 +83,8 @@
   },
   "ledger-es": {
     "pages": 4,
-    "pdf_sha256": "07d27d15de4041ee036e6a5705842e0159a8e9fa64b82d1ebcdba35d6ff7db99",
-    "tex_sha256": "a27c119d12a83896da4f81a065e0fdbf4c7a73e3c8dfd06531cf7dc442d6f11f",
+    "pdf_sha256": "bab2d664f9fca423875dbe2efe341f1f33610318db2b0072431452dd8d624e1c",
+    "tex_sha256": "0fe40c24f23b21d05d4ab700fc93ff2b977b9511ce88b059d6c067c7abd2983e",
     "printed_reference_urls": [],
     "title_page_repositories": [
       "https://github.com/jtraverso/split-clique-partition-gap",

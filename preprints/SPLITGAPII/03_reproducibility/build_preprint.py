@@ -45,7 +45,7 @@ def tables(body):
 
 def tex_source(md, pandoc):
     source = md.read_text(encoding="utf-8")
-    title = source.splitlines()[0][2:]
+    title = source.splitlines()[0][2:].replace("*", "")
     spanish = md.stem.endswith("-es")
     paper = md.stem.startswith("split-gap")
     ledger = md.stem.startswith("ledger-")
@@ -57,7 +57,6 @@ def tex_source(md, pandoc):
             raise ValueError("Expected two numbered figures")
         body = tables(body)
     else:
-        title = title.replace("*", "")
         body = source[source.index("## Alcance" if spanish else "## What the formal statement says"):]
     if not paper:
         prefix = REPOSITORY + "/blob/main/preprints/SPLITGAPII/"
@@ -84,7 +83,7 @@ def tex_source(md, pandoc):
         r"\date{Preprint 1.0 \enspace · \enspace November 23, 2026}",
         r"\begin{document}\raggedbottom\maketitle",
         (r"\begin{center}\small Artículo II de la serie sobre brechas de partición en cliques en grafos split.\end{center}" if spanish else r"\begin{center}\small Paper II in the series on clique partition gaps in split graphs.\end{center}"),
-        r"\noindent\textbf{Reserved DOI:} \url{https://doi.org/10.5281/zenodo.24452724}\\",
+        r"\noindent\textbf{DOI:} \url{https://doi.org/10.5281/zenodo.24452724}\\",
         rf"\textbf{{Official series repository:}} \url{{{SERIES_REPOSITORY}}}\\",
         rf"\textbf{{Paper II repository:}} \url{{{REPOSITORY}}}",
         body.replace("\n\n\\[", "\n\\["), r"\end{document}", "",
@@ -95,7 +94,7 @@ def tex_source(md, pandoc):
     if spanish:
         lines[0] = lines[0].replace("[english,","[spanish,").replace("[english]{babel}", "[spanish,es-noshorthands]{babel}")
         lines = [line.replace("en-US", "es-CL").replace("Independent researcher", "Investigador independiente")
-                 .replace("November 23, 2026", "23 de noviembre de 2026").replace("Reserved DOI:", "DOI reservado:")
+                 .replace("November 23, 2026", "23 de noviembre de 2026")
                  .replace("Official series repository:", "Repositorio oficial de la serie:")
                  .replace("Paper II repository:", "Repositorio del artículo II:").replace("Formalization companion (PDF)", "Guía de la formalización (PDF)")
                  .replace("{Manuscript}", "{Manuscrito}").replace("companion-en.pdf", "companion-es.pdf")

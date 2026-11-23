@@ -9,7 +9,7 @@ Investigador independiente, Santiago, Chile<br>
 
 *Preprint 1.0 · 23 de noviembre de 2026*
 
-DOI reservado <https://doi.org/10.5281/zenodo.24452724>  
+DOI <https://doi.org/10.5281/zenodo.24452724>  
 Repositorio oficial de la serie <https://github.com/jtraverso/split-clique-partition-gap>  
 Repositorio del artículo II <https://github.com/jtraverso/split-clique-partition-gap-ii>
 
@@ -27,7 +27,11 @@ $$
 \Delta(G)=\operatorname{cp}(G)-\operatorname{cp}^{\ast}(G).
 $$
 
-Toda partición entera es factible para el problema fraccional, de modo que $\Delta(G)\ge0$. Los grafos split del primer artículo [1] tienen una clique $V$, el núcleo, y un conjunto independiente $H$. Cada vértice $h\in H$ es un *anfitrión* de vecindad $N_h\subseteq V$. En aquella construcción, un grafo $B$ sobre $V$ determina qué pares del núcleo requieren anfitrión. Cada uno de estos pares $uv$ tiene un anfitrión designado $h$ para el cual $huv$ es un triángulo. Al borrar la arista $hu$, el par $uv$ permanece en el núcleo, aunque perdemos el triángulo designado. Estudiaremos cuánto de la brecha original se conserva.
+Toda partición entera es factible para el problema fraccional, de modo que $\Delta(G)\ge0$. Balogh, He, Krueger, Nguyen y Wigal [10, Teorema 1.10] demuestran que $\Delta(G)=o(n^2)$ para grafos de $n$ vértices. Su teorema de descomposición da esta cota al tomar $t=2$ y asignar coste uno a cada clique.
+
+Los grafos split del primer artículo [1] tienen una clique $V$, el núcleo, y un conjunto independiente $H$. Cada vértice $h\in H$ es un *anfitrión* de vecindad $N_h\subseteq V$. En aquella construcción, un grafo $B$ sobre $V$ determina qué pares del núcleo requieren anfitrión. Cada uno de estos pares $uv$ tiene un anfitrión designado $h$ para el cual $huv$ es un triángulo. Al borrar la arista $hu$, el par $uv$ permanece en el núcleo, aunque perdemos el triángulo designado. Estudiaremos cuánto de la brecha original se conserva.
+
+Chen, Erdős y Ordman [11] asignan emparejamientos del núcleo a vértices del conjunto independiente para acotar el número entero de partición en cliques. Cuando están presentes todas las aristas cruzadas, Chahua y Gutierrez [14, Lema 2] usan cada vértice asignado para extender su emparejamiento a triángulos disjuntos en aristas.
 
 Fijemos un grafo $B$ sobre $V$ y pongamos $J=\binom{V}{2}\setminus E(B)$. Todos los pares de $V$ son aristas del grafo split $G$, incluidos los de $J$. Para $Q\subseteq V$ con $|Q|\ge2$, sea $e_B(Q)$ el número de aristas de $B$ con ambos extremos en $Q$. Asignamos a $Q$ la puntuación
 
@@ -153,6 +157,8 @@ En particular, vale $\Delta(G)=\Phi(B)$ si un óptimo entero y un óptimo fracci
 
 ## 3. Borrado de aristas cruzadas en un testigo
 
+En su cota para el número entero de partición, Chen, Erdős y Ordman [11] cuentan los triángulos designados que se pierden al faltar aristas cruzadas. Aquí los triángulos que sobreviven dan una asignación parcial. El Teorema 1 permite entonces acotar el cambio en la diferencia de los dos números de partición.
+
 **Corolario 5.** Sea $G$ un grafo con asignación completa como en (2). Si $G'$ se obtiene de $G$ borrando $q$ aristas entre $V$ y $H$, entonces
 
 $$
@@ -254,9 +260,11 @@ de tamaño al menos $k$. En una coloración propia obtenida de estas listas, los
 
 Häggkvist y Janssen [2, Teorema 1.1] muestran que listas de tamaño $c$ bastan para $K_c$. Bastan también para $J$, pues se puede extender una instancia a $K_c$ dando listas arbitrarias de ese tamaño a los demás pares del núcleo. Si $J$ tiene grado máximo $d\ge1$, cada arista toca a lo sumo $2d-2$ aristas distintas de ella. Al colorearlas en cualquier orden con listas de tamaño $2d-1$ siempre queda un color disponible. Cualquiera de los argumentos sirve, de modo que podemos tomar $k=\min\{c,2d-1\}$. Para un emparejamiento no vacío basta $k=1$. Si $J$ es vacío, la asignación es completa y se aplica directamente el Teorema 1.
 
-Los grafos $D_t^{(k)}$ están anidados. Con $d_{\max}=\max_{e\in J}d_k(e)$ (cero si $J$ es vacío), a lo sumo $d_{\max}$ tienen aristas y la cota en (8) es a lo sumo $2d_{\max}\nu(D_1^{(k)})$ para $k\ge1$. Una cubierta pequeña de vértices certifica cotas superiores para estos números de emparejamiento. Si todos los pares deficientes tocan alguno de los mismos dos vértices, cada nivel contribuye a lo sumo dos. En general, por la fórmula de Tutte–Berge [7], todo $S\subseteq V$ certifica la cota superior $(c+|S|-o(D_t^{(k)}-S))/2$, donde $o$ cuenta las componentes impares, y algún $S$ alcanza la igualdad.
+Los grafos $D_t^{(k)}$ están anidados. Con $d_{\max}=\max_{e\in J}d_k(e)$ (cero si $J$ es vacío), a lo sumo $d_{\max}$ tienen aristas y la cota en (8) es a lo sumo $2d_{\max}\nu(D_1^{(k)})$ para $k\ge1$. Una cubierta pequeña de vértices certifica cotas superiores para estos números de emparejamiento. Si todos los pares deficientes tocan alguno de los mismos dos vértices, cada nivel contribuye a lo sumo dos. En general, por la fórmula de Tutte–Berge [13, capítulo 3] (formalizada en [7]), todo $S\subseteq V$ certifica la cota superior $(c+|S|-o(D_t^{(k)}-S))/2$, donde $o$ cuenta las componentes impares, y algún $S$ alcanza la igualdad.
 
 En el siguiente corolario tomamos $k=c$ y abreviamos $D_t^{(c)}$ como $D_t(J)$.
+
+Okechukwu [12, Lema 4.1] usa listas de vecinos exteriores comunes para extender aristas del núcleo a triángulos. Su prueba reserva paletas separadas y aplica el teorema de Galvin entre dos mitades del núcleo. La siguiente cota mide cómo se distribuyen las incidencias ausentes entre los vértices del núcleo.
 
 **Corolario 8.** Para toda presentación split con núcleo $V$, pongamos $J=\binom{V}{2}$ y formemos los grafos $D_t(J)$ a partir de las vecindades dadas. Entonces
 
@@ -358,7 +366,7 @@ El autor es responsable de los argumentos, las citas, el código y la presentaci
 
 ## Referencias
 
-[1] J. P. Traverso Gianini, *Nearly Quadratic Additive Gaps for Edge-Clique Partitions of Split Graphs*, preprint 1.0 (2026), Teorema 1.1 y Lema 2.1. DOI 10.5281/zenodo.24408988. <https://github.com/jtraverso/split-clique-partition-gap>
+[1] J. P. Traverso Gianini, *Nearly Quadratic Additive Gaps for Edge-Clique Partitions of Split Graphs*, preprint 1.0 (2026), Teorema 1.1 y Lema 2.1. <https://doi.org/10.5281/zenodo.24408988> · <https://github.com/jtraverso/split-clique-partition-gap>
 
 [2] R. Häggkvist and J. Janssen, *New bounds on the list-chromatic index of the complete graph and other simple graphs*, Combinatorics, Probability and Computing **6** (1997), 295–313, Teorema 1.1. <https://doi.org/10.1017/S0963548397002927>
 
@@ -375,3 +383,13 @@ El autor es responsable de los argumentos, las citas, el código y la presentaci
 [8] J. P. Traverso Gianini, *Split Gap II*, código fuente, instrucciones de compilación y ejemplos finitos exactos. <https://github.com/jtraverso/split-clique-partition-gap-ii>
 
 [9] F. Galvin, *The List Chromatic Index of a Bipartite Multigraph*, Journal of Combinatorial Theory, Series B **63** (1995), 153–158. <https://doi.org/10.1006/jctb.1995.1011>
+
+[10] J. Balogh, J. He, R. A. Krueger, T. Nguyen and M. C. Wigal, *Clique covers and decompositions of cliques of graphs*, Advances in Combinatorics **2026** (2026), art. 9, Teorema 1.10. <https://doi.org/10.19086/aic/2026.9>
+
+[11] G.-T. Chen, P. Erdős and E. T. Ordman, *Clique partitions of split graphs*, in *Combinatorics, Graph Theory, Algorithms and Applications* (Beijing, 1993), World Scientific, 1994, 21–30. <https://ordman.net/MathResearch/CEOClique_Parts.pdf>
+
+[12] O. Okechukwu, *Clique partitions and bounded simplicial defect*, arXiv:2609.20871 (2026), Lema 4.1. <https://arxiv.org/abs/2609.20871>
+
+[13] L. Lovász and M. D. Plummer, *Matching Theory*, AMS Chelsea Publishing, 2009, capítulo 3. <https://doi.org/10.1090/chel/367>
+
+[14] L. Chahua and J. Gutierrez, *On Tuza’s conjecture in dense graphs*, arXiv:2405.11409 (2024), Lema 2. <https://arxiv.org/abs/2405.11409>

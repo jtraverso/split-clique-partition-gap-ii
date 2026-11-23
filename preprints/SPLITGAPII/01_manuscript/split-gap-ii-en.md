@@ -1,20 +1,24 @@
-# Additive Gaps for Edge-Clique Partitions of Split Graphs II. Stability of Host Transfer
+# Stability of the Clique Partition Gap in Split Graphs
 
 **Juan Pablo Traverso Gianini**<br>
 Independent researcher, Santiago, Chile<br>
 [jtraverso@gmail.com](mailto:jtraverso@gmail.com)<br>
 [ORCID 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
 
-*Preprint 1.0 · November 22, 2026*
+**Paper II in the series on clique partition gaps in split graphs.**
 
-DOI <https://doi.org/10.5281/zenodo.24452724>  
-Official repository <https://github.com/jtraverso/split-clique-partition-gap-ii>
+*Preprint 1.0 · November 23, 2026*
+
+Reserved DOI <https://doi.org/10.5281/zenodo.24452724>  
+Paper II repository <https://github.com/jtraverso/split-clique-partition-gap-ii>
 
 ## Abstract
 
-Let $G$ be a split graph with clique core $V$ of size $c$. If the host neighborhoods are independent in a residual graph $B$ on $V$, a proper host assignment missing $L$ required pairs determines the additive edge-clique partition gap $\Delta(G)$ to within $2L$ of the residual packing gap $F(B)-I(B)$. The error in each direction depends on the capacity left unused by the corresponding optimal packing. For the examples in Part I, the nearly quadratic lower bound survives arbitrary deletion of $O(n^{2-\varepsilon})$ crossing edges for each fixed $\varepsilon>0$. When only the surviving neighborhoods are known, matchings among pairs with short lists bound the loss. With $2c$ hosts the gap is zero whenever each core vertex misses at most $\lfloor c/2\rfloor$ hosts. Deleting exactly that many edges at each core vertex therefore allows $c\lfloor c/2\rfloor$ deletions, however the omitted host sets overlap. We also derive recovery bounds by sampling a matching from each host's matching polytope and by choosing a single matching in a hypergraph of compatible assignments.
+In Part I [1], we realized a residual packing gap by assigning core pairs to hosts. Here we study what can be deduced about the gap when some pairs lack an assignment. Let $G$ be a split graph whose core is a clique of size $c$, and suppose each host neighborhood is independent in the residual graph. If a proper assignment leaves $L$ required pairs unassigned, the gap of $G$ differs from the residual packing gap by at most $2L$. One crossing-edge deletion attains the bound. The nearly quadratic gap of Part I survives arbitrary deletion of $O(n^{2-\varepsilon})$ crossing edges for fixed $\varepsilon>0$. Without changing the number $n$ of vertices, we modify the padding hosts so that $\Theta(n^2)$ crossing edges incident to them can be deleted with exactly the same gap, subject to a budget at each core vertex and with all originally assigned triangles intact. When only the neighborhoods are known, matching numbers of deficient lists control the loss. With $2c$ hosts the gap is zero if each core vertex misses at most $\lfloor c/2\rfloor$ of them, permitting $c\lfloor c/2\rfloor$ missing crossing edges regardless of how the omitted sets overlap. We also recover pairs by independently choosing a matching at each host according to a fractional decomposition, or by choosing a single matching in the hypergraph of assignments.
 
 ## 1. Partial host assignments
+
+The first paper in this series, *Nearly Quadratic Additive Gaps for Edge-Clique Partitions of Split Graphs* [1], constructed split graphs with a nearly quadratic gap. In this second paper we study the stability of the assignment that realizes that gap.
 
 In a clique partition of a finite simple graph $G$, each edge belongs to exactly one of the chosen cliques. Write $\operatorname{cp}(G)$ for the least number of cliques in such a partition. A fractional clique partition assigns a nonnegative weight to each clique so that the weights on every edge sum to one, and the minimum total weight of such an assignment is $\operatorname{cp}^{\ast}(G)$. Throughout, the cliques used as pieces have at least two vertices and may have arbitrary order. We write
 
@@ -30,10 +34,12 @@ $$
 w(Q)=2e_B(Q)-\binom{|Q|}{2}-1.
 $$
 
-The first term in the following expression is the saving from using $Q$ in place of its individual edges. Each required pair occupied by $Q$ also displaces a possible host triangle, whose saving is two. Thus the score measures the net saving on the core:
+Since every pair of $Q$ lies in exactly one of $E(B)$ and $J$, the score can also be written as
 $$
 w(Q)=\left(\binom{|Q|}{2}-1\right)-2\left|J\cap\binom{Q}{2}\right|.
 $$
+
+The first term counts the saving from covering all edges of $Q$ with a single piece. The second deducts two for each required pair occupied by that piece. Each such pair could otherwise support a host triangle, replacing three individual edges with one piece.
 
 A *residual packing* is a collection of such sets in which each pair of $V$ occurs at most once. Write $I(B)$ for its maximum total score, allowing the empty collection. In a fractional residual packing, the variables $y_Q\ge0$ satisfy
 
@@ -51,7 +57,7 @@ $$
 \big|\Delta(G)-(F(B)-I(B))\big|\le 2L. \tag{1}
 $$
 
-When $J_0=J$, (1) recovers the exact gap identity in [1, Lemma 2.1]. For an incomplete assignment, we adjoin a private host of degree two for each unassigned pair and then restrict the resulting graph to its original vertices. Section 3 applies this estimate to deletions from an existing witness. Sections 4–6 estimate how many pairs can be assigned from the surviving neighborhoods alone. Section 4 counts matchings of pairs with deficient lists. Sections 5 and 6 exploit overlapping choices through matching polytopes and pseudorandom hypergraph matchings, respectively. Paper VI [4] studies partition optima near complete split graphs and supplies the list-coloring tools for Section 4.
+When $J_0=J$, (1) recovers the exact gap identity in [1, Lemma 2.1]. For an incomplete assignment, we adjoin a private host of degree two for each unassigned pair and then restrict the resulting graph to its original vertices. After applying Theorem 1 to crossing-edge deletions in Section 3, we turn to the assignments that can be recovered from the surviving neighborhoods. We use the list-coloring tools of Paper VI [4] to bound the loss through matchings on deficient lists in Section 4, then exploit overlapping choices through matching polytopes in Section 5 and pseudorandom hypergraph matchings in Section 6.
 
 ## 2. The proof of stability
 
@@ -71,7 +77,17 @@ $$
        =\sum_K x_K\binom{|K|}{2}.
 $$
 
-Subtracting the cost $\sum_Kx_K$ gives the total saving. An integral partition is the case in which the chosen cliques have weight one.
+The partition into single edges costs $|E(G)|$. A fractional partition costs $\sum_K x_K$, since one unit of weight costs one unit regardless of clique size. Its saving is the difference
+
+$$
+\begin{aligned}
+\underbrace{|E(G)|-\sum_K x_K}_{\text{total saving}}
+ &=\sum_K x_K\binom{|K|}{2}-\sum_K x_K\\
+ &=\sum_K x_K\left(\binom{|K|}{2}-1\right).
+\end{aligned}
+$$
+
+For an integral partition, $x_K=1$ for each chosen clique and $x_K=0$ otherwise, so the last sum adds the savings of the individual pieces.
 
 Put $j(Q)=|J\cap\binom{Q}{2}|$. Since $e_B(Q)+j(Q)=\binom{|Q|}{2}$, the saving on a clique contained in the core is
 
@@ -79,14 +95,16 @@ $$
 \binom{|Q|}{2}-1=w(Q)+2j(Q). \tag{3}
 $$
 
-Every other clique consists of one host and $u\ge1$ of its neighbors. These $u$ vertices span only pairs of $J$, because the host neighborhood is independent in $B$. Its saving can be charged to those pairs at two units per pair. In fact,
+A clique outside the core contains one host and $u\ge1$ of its neighbors. It covers $\binom u2$ core pairs and $u$ crossing edges, at a cost of one piece. All its core pairs belong to $J$ by neighborhood independence. To bound its saving, allow two units for each of those pairs. The unused allowance is
 
 $$
 2\binom u2-\left(\binom{u+1}{2}-1\right)
-=\frac{(u-1)(u-2)}2\ge0
+=\binom u2-u+1
+=\frac{u(u-1)-2u+2}{2}
+=\frac{(u-1)(u-2)}2.
 $$
 
-for every integer $u\ge1$. Now take any clique partition. Its core cliques form a residual packing, so their total score is at most $I(B)$. The additional charges from (3) and from the cliques containing hosts sum to at most $2|J|$, since each pair of $J$ is covered once. With fractional weights, the core cliques satisfy the same pair capacities, and the total weight at each pair of $J$ is still one. The saving is therefore at most $I(B)+2|J|$ in the integral case and $F(B)+2|J|$ in the fractional case.
+For $u=1$ the piece is a single edge and saves zero. For $u=2$ a triangle saves exactly the two units allowed by its one core pair. For $u=3$ a four-vertex clique saves five pieces against an allowance of six. The factored expression is nonnegative for every integer $u\ge1$. Now take any clique partition. Its core cliques form a residual packing, so their total score is at most $I(B)$. The additional charges from (3) and from the cliques containing hosts sum to at most $2|J|$, since each pair of $J$ is covered once. With fractional weights, the core cliques satisfy the same pair capacities, and the total weight at each pair of $J$ is still one. The saving is therefore at most $I(B)+2|J|$ in the integral case and $F(B)+2|J|$ in the fractional case.
 
 For the reverse bounds, start with an optimal residual packing. Write $y_Q$ for its coefficients, using zero and one in the integral case, and set $\ell_e=\sum_{Q\supseteq e}y_Q$ for each core pair $e$. Keep the core cliques at weights $y_Q$. For each $e=uv\in J$ with assigned host $h$, give $huv$ weight $1-\ell_e$. This fills $e$ to weight one. The matching condition ensures that the crossing edges $hu$ and $hv$ occur in no other assigned triangle, so their loads also remain at most one. Give each edge of $G$ its remaining weight as an individual edge. This is an exact fractional partition. If the starting coefficients are integral, every remaining weight is zero or one, and the same construction is an integral partition.
 
@@ -112,7 +130,7 @@ For an illustration with a three-vertex core, take $V=\{u,v,w\}$, $E(B)=\{uw\}$ 
 
 ![A private host for the missing pair vw](figures/private-host.png)
 
-*Figure 1. Completing the assignment at the pair $vw$. The solid edges belong to the original split graph.*
+*Figure 1. Completing the assignment at the pair $vw$. The solid edges, including the core edge $vw$, belong to the original split graph.*
 
 **Lemma 4 (unused capacity on missing pairs).** Under the hypotheses of Theorem 1, write $M=J\setminus J_0$ and $\Phi(B)=F(B)-I(B)$. Let $\ell_e^I$ and $\ell_e^F$ be the loads of any chosen optimal integral and fractional residual packings. Then
 $$
@@ -130,7 +148,7 @@ A-F(B)&\le\operatorname{cp}^{\ast}(G)\le A-F(B)+R_F.
 $$
 Subtracting the upper endpoint of the second interval from the lower endpoint of the first gives $\Phi(B)-R_F$. The opposite endpoints give $\Phi(B)+R_I$, proving (5).
 
-In particular, equality $\Delta(G)=\Phi(B)$ still holds if an integral optimum and a fractional optimum each saturate every missing pair. Section 3 places the best universal coefficient for crossing-edge deletions from a complete assignment between one and two.
+In particular, equality $\Delta(G)=\Phi(B)$ still holds if an integral optimum and a fractional optimum each saturate every missing pair. Proposition 5a attains the constant two with one crossing-edge deletion from a complete assignment.
 
 ## 3. Deleting crossing edges from a witness
 
@@ -173,15 +191,45 @@ Writing a string of vertices for the corresponding subset of $V$, fractional pac
 
 In the middle row, an integral packing of score six would attain the total dual price. It would therefore cover each positive-price pair $15,24,34$ and use only tight sets, those whose score equals the sum of their pair prices. Checking the subsets containing $34$ gives just two tight choices, $1234$ and $2345$. The tight choices containing $15$ are $0125,0145,1245,01245$. Each choice in the first list shares a pair with each choice in the second, so an integral packing cannot attain six. The sets $234$ and $0145$ share only vertex $4$ and have scores two and three. They attain five.
 
-For the integral optima let $T(A)$ be the maximum residual score using only the available core pairs $A$. If no positive-score subset has all its pairs in $A$, then $T(A)=0$. Otherwise $T(A)$ is the maximum of zero and $w(Q)+T(A\setminus\binom Q2)$ over those subsets. The recursion is exact because any nonempty optimal positive-score packing contains one such $Q$ and its other pieces avoid every pair of $Q$. The companion's short verifier evaluates it on the fifteen available pairs and checks every price and packing inequality in rational arithmetic. The respective maximizing packings include $1245$, the pair of sets $234,0145$, and $012345$. Substitution in (2) gives the two partition numbers in each row.
+For the integral optima let $T(A)$ be the maximum residual score using only the available core pairs $A$. If no positive-score subset has all its pairs in $A$, then $T(A)=0$. Otherwise $T(A)$ is the maximum of zero and $w(Q)+T(A\setminus\binom Q2)$ over those subsets. The recursion is exact because any nonempty optimal positive-score packing contains one such $Q$ and its other pieces avoid every pair of $Q$. The verification script in [8] evaluates $T$ on the fifteen available pairs and checks every price and packing inequality in exact rational arithmetic. The respective maximizing packings include $1245$, the pair of sets $234,0145$, and $012345$. Substitution in (2) gives the two partition numbers in each row.
 
-These unit changes add over arbitrarily many copies. For a disjoint union of residual graphs, projecting a piece $Q$ onto its $m$ nonempty block intersections gives a total of the block scores exceeding $w(Q)$ by the number of cross-block pairs in $Q$ minus $(m-1)$. This difference is nonnegative since there are at least $\binom m2$ such pairs. In this calculation a singleton has score $-1$, so dropping it only increases the projected score. Projection preserves capacities within each block, and conversely block packings can be combined without conflict. This proves additivity of both residual optima, also for fractional coefficients. On the union core, supply private hosts for all cross-block pairs as well as the original hosts in each block. One deletion per copy then raises the gap by $q$ on $q$ copies. Starting at the middle row in each copy and making the second deletion lowers it by $q$. Thus the smallest universal coefficient for crossing-edge deletions starting from a complete assignment in Corollary 5 lies in $[1,2]$. Its exact value remains open.
+These unit changes add over arbitrarily many copies. For a disjoint union of residual graphs, projecting a piece $Q$ onto its $m$ nonempty block intersections gives a total of the block scores exceeding $w(Q)$ by the number of cross-block pairs in $Q$ minus $(m-1)$. This difference is nonnegative since there are at least $\binom m2$ such pairs. In this calculation a singleton has score $-1$, so dropping it only increases the projected score. Projection preserves capacities within each block, and conversely block packings can be combined without conflict. This proves additivity of both residual optima, also for fractional coefficients. On the union core, supply private hosts for all cross-block pairs as well as the original hosts in each block. One deletion per copy then raises the gap by $q$ on $q$ copies. Starting at the middle row in each copy and making the second deletion lowers it by $q$.
+
+**Proposition 5a (sharpness).** The coefficient two in (6) is optimal. Equality also occurs in (1) with $L=1$.
+
+*Proof.* On the eight core vertices $0,\ldots,7$ take
+$$
+J=\{14,15,17,35,36,46,47,56,57,67\}.
+$$
+Set $E(B)=\binom{V}{2}\setminus J$. Give each pair its own degree-two host. Delete the crossing edge joining vertex $1$ to the host of $14$. To evaluate (2) after deletion, move $14$ into the residual. The nine surviving assignments are complete for the new required set, and the tenth host has a singleton neighborhood. The baseline in (2) goes from $48-2(10)=28$ to $47-2(9)=29$.
+
+| State | $I$ | $F$ | $\operatorname{cp}$ | $\operatorname{cp}^{\ast}$ | $\Delta$ |
+|---|---:|---:|---:|---:|---:|
+| Before | $11$ | $35/3$ | $17$ | $49/3$ | $2/3$ |
+| After | $11$ | $41/3$ | $18$ | $46/3$ | $8/3$ |
+
+The integral packing $245$, $237$, $034$, $0126$ scores eleven in both states. The recurrence for $T$ above, started with all 28 pairs, gives eleven as its upper bound in each case. For the fractional packing, use weight $4/9$ on each of $016$, $037$, $045$, $126$, $237$, $245$, $0134$, $1234$, weight $2/9$ on $0256$, $0257$, $0267$, and weight $1/9$ on $134$, $0126$, $0237$, $0245$. Before deletion the dual prices are $1/3$ on $05$, $06$, $07$, $25$, $26$, $27$, $2/3$ on $16$, $37$, $45$, $1$ on $01$, $03$, $04$, $12$, $23$, $24$, and $5/3$ on $02$, with zero elsewhere. Their sum is $35/3$. Adding two to the price of $14$ maintains dual feasibility in the second state because precisely the sets containing that pair gain two in score. The packing saturates $14$ and attains both dual values. The verification script in [8] checks the 28 capacities and all 247 subset inequalities in each state and evaluates the integer recurrence.
+
+Thus one deletion increases the gap by two. With the original residual held fixed, the same deletion leaves exactly one missing pair and gives $\Delta(G')-\Phi(B)=2$. The disjoint-copy construction above gives an increase of $2q$ for $q$ deletions.
 
 **Proposition 6 (changes to the residual graph).** Suppose $B,B'$ are graphs on the same core and $b=|E(B)\mathbin{\triangle} E(B')|$. Then
 $$
 |\Phi(B')-\Phi(B)|\le 2b. \tag{7}
 $$
 *Proof.* Adding one edge $e$ raises the score of any fixed feasible packing by twice its load at $e$, an amount in $[0,2]$. The feasible sets depend only on the core pairs. Evaluating an optimal packing for $B$ under the score function $w_{B'}$ shows that neither optimum can decrease. Evaluating an optimal packing for $B'$ under $w_B$ bounds each increase by two. The difference between the two increases therefore lies in $[-2,2]$. Reversing the argument handles a deletion, and summing along the $b$ edits gives (7). For split graphs with respective independent host neighborhoods and assignments missing $L,L'$ pairs, (1) at both ends yields $|\Delta(G')-\Delta(G)|\le 2(L+b+L')$.
+
+**Proposition 6a (protected old assignments).** Let the residual on the old core $U=U_0\sqcup U_1\sqcup U_2$ have these three independent classes and a complete assignment by old hosts. Adjoin $W$ as isolated vertices of the residual, keeping all old assignments and all host neighborhoods independent in the enlarged residual. Write $w=|W|\ge v=|U|$. For each class supply a separate family $H_i$ of $w+v+r$ new hosts with neighborhood $W\cup U_i$, where $r\ge0$ is an integer. Form $G'$ from the resulting split graph $G$ by deleting crossing edges. Suppose each core vertex loses at most $b=\lfloor(v+r)/2\rfloor$ incidences in the union of the three families. If $q_0$ deleted edges belong to the original assigned triangles on $U$, then
+$$
+|\Delta(G')-\Delta(G)|\le 2q_0.
+$$
+
+*Proof.* For each pair in $W\times U_i$ at least $w+v+r-2b\ge w$ hosts in its family still see both ends. The maximum degree of this bipartite request graph is at most $w$, so Galvin's list edge-coloring theorem [9] gives a proper assignment within each family. Families for different classes are disjoint. At each vertex of $W$ this stage occupies at most $v$ hosts, one for each old core neighbor. For an internal pair of $W$, remove from its list the hosts unavailable at either end and those already used at either end. At least
+$$
+3(w+v+r)-2b-2v\ge 3w+2r\ge w
+$$
+hosts remain available for each internal pair of $W$. Häggkvist–Janssen [2] now assigns all internal pairs, with disjoint crossing edges at each host. The old assigned triangles use other hosts. Each deleted edge there destroys at most one such triangle, leaving at most $q_0$ missing pairs. Applying the same construction before deletion gives a complete assignment. Applying (2) before deletion and (1) after deletion compares both gaps with the same difference of residual optima.
+
+For the witnesses of [1, §§5–6], $w=\lceil n/5\rceil$ and $v=\Theta(n/\sqrt{\log n})$ as calculated in Section 6. With $r=0$, deleting $\lfloor v/2\rfloor$ incidences at each vertex of $W$ in the three families already permits $\Theta(n^2/\sqrt{\log n})$ deletions with unchanged gap. To obtain a quadratic budget at the same order, take $r=\lfloor n/100\rfloor$. Before the final padding, the construction uses $n_0+4w+3v\le24n/25+4$ vertices because $v\le n_0\le n/25$. For sufficiently large $n$, the remaining $n/25-4$ vertices guaranteed by this count suffice to provide $3r$ padding hosts. In each family, we connect $r$ of these padding hosts to $U_i$ in addition to $W$. This preserves independence and the old assigned triangles. Adding isolated vertices to the residual preserves both packing optima [1, §5], so the modified graph has the original gap. At each vertex of $W$ one may now delete any $b$ incidences to the three families. This gives $wb=\Theta(n^2)$ deletions with $q_0=0$ and hence exactly the original nearly quadratic gap.
 
 ## 4. Reading the loss from the host lists
 
@@ -229,7 +277,7 @@ $$
 $$
 Give each $u$ its own set $A_u$ of $s_u$ auxiliary colors. These sets are mutually disjoint and avoid the hosts. The list $L_{uv}\cup A_u\cup A_v$ has at least $c$ colors, so [2] gives a proper coloring. A color belonging to $A_u$ is available only on edges incident to $u$, and properness allows at most one of those edges to use it. Discarding the edges with auxiliary colors therefore loses at most $\sum_u s_u$ pairs. The remaining colors give a proper host assignment, and (1) yields (10). Under the stated hypothesis the sum has at most $r$ nonzero terms of size at most $r$.
 
-For $2c$ hosts, suppose each core vertex misses an arbitrary set of $\lfloor c/2\rfloor$ of them. Then $c\lfloor c/2\rfloor$ crossing edges are absent, yet every core pair has at least $c$ common hosts. Every positive deficiency level is empty, so $\Delta(G)=0$ even with, for example, $5{,}000$ missing crossing edges when $c=100$. Conversely, a gap of size $g$ forces the sum of the matching numbers in (9) to be at least $g/2$ in every split presentation.
+For $2c$ hosts, suppose each core vertex misses an arbitrary set of $\lfloor c/2\rfloor$ of them. Then $c\lfloor c/2\rfloor$ crossing edges are absent, yet every core pair has at least $c$ common hosts. Every positive deficiency level is empty, so $\Delta(G)=0$ (permitting $5{,}000$ missing crossing edges when $c=100$). Conversely, a gap of size $g$ forces the sum of the matching numbers in (9) to be at least $g/2$ in every split presentation.
 
 ## 5. Redundancy at individual hosts
 
@@ -261,6 +309,10 @@ Consequently some such pair has $\lambda_{uv}\le |H|/(w-1)\le(n-w)/(w-1)=4+o(1)$
 
 To record both causes of conflict between candidate triangles, form a hypergraph whose vertices are the required pairs and the crossing incidences $(h,u)$ with $u\in N_h$, taken as disjoint classes. A candidate $huv$ gives the hyperedge $\{uv,(h,u),(h,v)\}$. A matching selects each pair at most once and uses each crossing edge at most once, precisely the conditions for a proper partial assignment. Two pair vertices never lie in one hyperedge. A pair and an incidence determine the host and both endpoints, and two incidences in one hyperedge also determine the triangle. Thus distinct vertices have codegree at most one.
 
+![Conflicts between candidate triangles](figures/triangle-conflicts.png)
+
+*Figure 2. The candidates $h_2uv$ and $h_1uv$ compete for the pair $uv$. The candidates $h_1uv$ and $h_1uw$ use the same crossing edge $h_1u$. The two outer candidates are compatible.*
+
 Write $S=\sum_{e\in J}|L_e|$ for the number of hyperedges. The degree of $e$ is $|L_e|$ and the degree of $(h,u)$ is $d_{J_h}(u)$. Under neighborhood independence every pair of $N_h$ belongs to $J$, so the latter degree equals $|N_h|-1$ for $u\in N_h$. Both kinds of degrees enter the choice of $D$ below.
 
 **Proposition 10.** Fix $0<\delta<1$ and put $\epsilon=\delta/450$. For sufficiently large $D$ depending on $\delta$, suppose all the above degrees are at most $D$ and
@@ -282,7 +334,7 @@ $$
 $$
 In particular, the special case with $\eta=o(1)$ does not apply to all pairs in these witnesses. We can also evaluate the order of the unweighted estimate. In the notation of [1, §6], $v_0=15m^{2j}$, $j$ is of order $\sqrt{\log n}$, and $m$ is the largest odd integer at most $X=(n/(25b_j))^{1/(2j)}$, where $b_j=255+2880j$. Since $X/j\to\infty$ and $m>X-2$, we have $(m/X)^{2j}\to1$, giving $v_0=\Theta(n/\sqrt{\log n})$. Now $S\ge\binom w2D=\Theta(n^3)$ and $S\le n^3$, so both size hypotheses hold eventually for every fixed $\delta\in(0,1)$.
 
-The discrepancy is the sum of the unused proportions of the individual lists:
+The normalized deficit is the sum of the unused proportions of the individual lists:
 $$
 |J|-S/D=\sum_{e\in J}\bigl(1-|L_e|/D\bigr).
 $$
@@ -290,7 +342,9 @@ Every pair within $W$ contributes zero. There are at most $wv_0+\binom{v_0}{2}$ 
 
 ## 7. Formalization
 
-The Lean 4 sources in [8] establish the two-sided transfer estimate (1), its refinement by the loads of the chosen optima (5), and both perturbation bounds (6) and (7). They also give the complete-core threshold $k=c$ in (8), the endpoint excess bound (10), and the independent-matching estimate in (11) given finite matching decompositions. The fractional residual optimum in Lean is a supremum. Compactness of the finite feasible set identifies it with the maximum used here. The repository lists the declarations and their axioms, gives build instructions, and includes the exact verifier for the example in Section 3. The general list threshold, the replication argument and the asymptotic applications have written proofs in the preceding sections.
+The Lean 4 sources in [8] establish the two-sided transfer estimate (1), its refinement by the loads of the chosen optima (5), and both perturbation bounds (6) and (7). They also give the complete-core threshold $k=c$ in (8), the endpoint excess bound (10), and the independent-matching estimate in (11) given finite matching decompositions. Compactness of the finite-dimensional feasible polytope identifies the supremum used in Lean with the maximum used here. The repository lists the declarations and their axioms, gives build instructions, and includes the exact verifiers for both examples in Section 3. The proof of Proposition 6a, the general list threshold, the replication argument and the asymptotic applications are given in the preceding sections.
+
+The bilingual proof ledger accompanying [8] gives the calculation behind each result, including the equality case and the two stages of the padding construction.
 
 ## Acknowledgments
 
@@ -304,7 +358,7 @@ The author remains responsible for the arguments, citations, code and presentati
 
 ## References
 
-[1] J. P. Traverso Gianini, *Nearly Quadratic Additive Gaps for Edge-Clique Partitions of Split Graphs*, preprint 1.0 (2026), Theorem 1.1 and Lemma 2.1. <https://github.com/jtraverso/split-clique-partition-gap>
+[1] J. P. Traverso Gianini, *Nearly Quadratic Additive Gaps for Edge-Clique Partitions of Split Graphs*, preprint 1.0 (2026), Theorem 1.1 and Lemma 2.1. DOI 10.5281/zenodo.24408988. <https://github.com/jtraverso/split-clique-partition-gap>
 
 [2] R. Häggkvist and J. Janssen, *New bounds on the list-chromatic index of the complete graph and other simple graphs*, Combinatorics, Probability and Computing **6** (1997), 295–313, Theorem 1.1. <https://doi.org/10.1017/S0963548397002927>
 
@@ -318,4 +372,6 @@ The author remains responsible for the arguments, citations, code and presentati
 
 [7] J. P. Traverso Gianini, *Berge's augmenting path theorem and the Tutte–Berge formula*, Lean formalization. <https://github.com/jtraverso/berge-matching>
 
-[8] J. P. Traverso Gianini, *Split Gap II*, source code, build instructions and exact finite example. <https://github.com/jtraverso/split-clique-partition-gap-ii>
+[8] J. P. Traverso Gianini, *Split Gap II*, source code, build instructions and exact finite examples. <https://github.com/jtraverso/split-clique-partition-gap-ii>
+
+[9] F. Galvin, *The List Chromatic Index of a Bipartite Multigraph*, Journal of Combinatorial Theory, Series B **63** (1995), 153–158. <https://doi.org/10.1006/jctb.1995.1011>

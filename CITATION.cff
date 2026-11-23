@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "Please cite the preprint when using the manuscript or its formalization."
-title: "Additive Gaps for Edge-Clique Partitions of Split Graphs II. Stability of Host Transfer"
+title: "Stability of the Clique Partition Gap in Split Graphs"
 type: software
-version: "1.1"
+version: "1.0"
 authors:
   - family-names: Traverso Gianini
     given-names: Juan Pablo
@@ -10,12 +10,12 @@ authors:
 repository-code: https://github.com/jtraverso/split-clique-partition-gap-ii
 preferred-citation:
   type: article
-  title: "Additive Gaps for Edge-Clique Partitions of Split Graphs II. Stability of Host Transfer"
+  title: "Stability of the Clique Partition Gap in Split Graphs"
   authors:
     - family-names: Traverso Gianini
       given-names: Juan Pablo
       orcid: https://orcid.org/0009-0003-6068-4096
   year: 2026
-  version: "1.1"
+  version: "1.0"
   doi: 10.5281/zenodo.24452724
   url: https://github.com/jtraverso/split-clique-partition-gap-ii

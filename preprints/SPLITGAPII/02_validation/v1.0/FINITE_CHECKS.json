@@ -1,33 +1,40 @@
 {
-  "method": "Exact integral recursion and rational primal and dual certificates, against every eligible core subset.",
-  "partition_numbers": [
+  "partition_numbers_12_vertices": [
     [
-      10,
-      10
+      "10",
+      "10"
     ],
     [
-      11,
-      10
+      "11",
+      "10"
     ],
     [
-      11,
-      11
+      "11",
+      "11"
     ]
   ],
-  "positive_dual_pairs_middle": [
-    "15",
-    "24",
-    "34"
+  "partition_numbers_18_vertices": [
+    [
+      "17",
+      "49/3"
+    ],
+    [
+      "18",
+      "46/3"
+    ]
   ],
-  "tight_sets_covering_34": [
-    "1234",
-    "2345"
+  "independent_check": "Branch on an available pair: leave it unused or choose one positive block containing it.",
+  "pivot_check": [
+    {
+      "deletion": 0,
+      "independent_integer_optimum": 11,
+      "pivot_states": 2901
+    },
+    {
+      "deletion": 1,
+      "independent_integer_optimum": 11,
+      "pivot_states": 4832
+    }
   ],
-  "tight_sets_covering_15": [
-    "0125",
-    "0145",
-    "1245",
-    "01245"
-  ],
-  "verifier": "03_reproducibility/six_core.py"
+  "fractional_certificate": "28 edge capacities and 247 dual inequalities per state; rational objectives agree exactly."
 }

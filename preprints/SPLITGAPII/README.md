@@ -1,5 +1,7 @@
-# Split Gap II · Preprint 1.0
+# Stability of the Clique Partition Gap in Split Graphs
 
-The bilingual manuscripts are in [01_manuscript](01_manuscript). The [validation record](02_validation/v1.0) includes the publication-time state of the reserved DOI, the finite example and the independent Lean build. [03_reproducibility](03_reproducibility) contains the PDF builder and the exact verifier. [04_integrity](04_integrity) binds the files to their SHA-256 hashes. The [formalization companion](05_formalization) contains both guides and the frozen Lean sources.
+Paper II · Preprint 1.0 · English edition of record, with Spanish translation.
 
-Official repository <https://github.com/jtraverso/split-clique-partition-gap-ii>. DOI <https://doi.org/10.5281/zenodo.24452724>.
+[Manuscripts](01_manuscript) · [Proof ledgers](06_proof_ledger) · [Lean companions and frozen source](05_formalization) · [Editorial and technical audit](02_validation/v1.0/AUDIT_RESULT.json) · [Reproduction](03_reproducibility/README.md).
+
+[Paper I](https://github.com/jtraverso/split-clique-partition-gap) · [Paper II repository](https://github.com/jtraverso/split-clique-partition-gap-ii). Reserved DOI 10.5281/zenodo.24452724.

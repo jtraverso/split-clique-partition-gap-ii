@@ -1,4 +1,4 @@
-# Lean companion to Stability of Host Transfer
+# Lean companion to Stability of the Clique Partition Gap in Split Graphs
 
 ## What the formal statement says
 
@@ -15,10 +15,10 @@ lake exe cache get
 lake build SplitGapII SplitGapIIAudit
 lake env lean SplitGapIIAudit.lean
 lake env lean AllAxioms.lean
+lake env lean SplitGapII11.lean
 ```
 
 The package pins Lean 4.35.0-rc3 and the Mathlib revision in its Lake manifest. The first audit prints the axiom dependencies of 25 named declarations. The second scans the imported project modules and rejects any theorem using axioms outside propositional extensionality, classical choice and quotient soundness. The validation directory records the clean build and the exhaustive list.
 
-The middle row of the twelve-vertex example also has a finite verifier. From the repository root, run `python examples/six_core.py`. It checks the dual prices, the fractional packings, the obstruction to an integral optimum of six and the three exact integral optima using Python's standard library.
 
-The general list threshold, the replication argument and the asymptotic statements, including Proposition 10, have written proofs in the manuscript. The two audits certify the formal statements indicated above.
+The additional file SplitGapII11.lean checks the two list-size inequalities and the arithmetic of the two-unit jump. The two exact programs for Section 3 certify the optima in the tables. The combinatorial arguments in Propositions 5a and 6a, the general list threshold and the asymptotic applications are proved in the manuscript.

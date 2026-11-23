@@ -1,0 +1,58 @@
+{
+  "split-gap-ii-en": {
+    "pages": 12,
+    "pdf_sha256": "85462dda6273bc22241302682d1433f8970e8a3c0627b7f06e9156b68427bdaa",
+    "tex_sha256": "eaa5f0b523f5d613be0f1e11ce702adfca198fecf2209e6ba96897464c037f94",
+    "printed_reference_urls": [
+      "https://github.com/jtraverso/split-clique-partition-gap",
+      "https://doi.org/10.1017/S0963548397002927",
+      "https://github.com/jtraverso/erdos81-colorability-realizability-defects",
+      "https://github.com/jtraverso/erdos81-optimal-clique-partitions",
+      "https://doi.org/10.6028/jres.069B.013",
+      "https://doi.org/10.1017/S0963548320000280",
+      "https://github.com/jtraverso/berge-matching",
+      "https://github.com/jtraverso/split-clique-partition-gap-ii",
+      "https://doi.org/10.1006/jctb.1995.1011"
+    ]
+  },
+  "split-gap-ii-es": {
+    "pages": 13,
+    "pdf_sha256": "11b87d8110605b7b57876e74cf85ab898dbc709b77a20c73779e6b3eda2e64fc",
+    "tex_sha256": "8f97afed49796486e449e32161221ccafc762c637bcd21f90bb8ee937133bbf5",
+    "printed_reference_urls": [
+      "https://github.com/jtraverso/split-clique-partition-gap",
+      "https://doi.org/10.1017/S0963548397002927",
+      "https://github.com/jtraverso/erdos81-colorability-realizability-defects",
+      "https://github.com/jtraverso/erdos81-optimal-clique-partitions",
+      "https://doi.org/10.6028/jres.069B.013",
+      "https://doi.org/10.1017/S0963548320000280",
+      "https://github.com/jtraverso/berge-matching",
+      "https://github.com/jtraverso/split-clique-partition-gap-ii",
+      "https://doi.org/10.1006/jctb.1995.1011"
+    ]
+  },
+  "companion-en": {
+    "pages": 1,
+    "pdf_sha256": "015baa0ff4dc0c293013d992647b27a80c3e05bdb8d9a9216a8d1a0906e8e445",
+    "tex_sha256": "11c06b6f1ff06eacd67b4682ede876af5087a4514b83b99973a18e238a4d2efa",
+    "printed_reference_urls": []
+  },
+  "companion-es": {
+    "pages": 1,
+    "pdf_sha256": "faaf8c14d79140dffa4f2364ea14f55787560381e534d9fbbe441ddbd4fa08b2",
+    "tex_sha256": "f6d2198717f7ac1566584a407d5cfbdcba5744124d34837dbe6b59e0bb056589",
+    "printed_reference_urls": []
+  },
+  "ledger-en": {
+    "pages": 3,
+    "pdf_sha256": "b82fbc458553974e89dc0665aae89b88fd906f283dbf6be0cb5811962feae033",
+    "tex_sha256": "eb50fb0d36c443d46520de2105806edfa339369340f829e2492cffd708b921aa",
+    "printed_reference_urls": []
+  },
+  "ledger-es": {
+    "pages": 4,
+    "pdf_sha256": "58cf6ce1653b56249c9e9776ca06b57b8103aa000278ba63be1dc33acefca197",
+    "tex_sha256": "b2235abdf1d5eead483eeb7985b9c9e292623947267a0aab2fca8621d7d07eb3",
+    "printed_reference_urls": []
+  }
+}

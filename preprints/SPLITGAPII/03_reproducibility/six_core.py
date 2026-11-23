@@ -5,6 +5,11 @@ from functools import cache
 from itertools import combinations
 
 
+def check(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
 vertices = "012345"
 pairs = ["".join(p) for p in combinations(vertices, 2)]
 blocks = ["".join(q) for k in range(2, 7) for q in combinations(vertices, k)]
@@ -40,25 +45,25 @@ for lost, weights, prices, expected in stages:
         hosts[lost].remove("0")
         residual.add(lost)
     required = set(pairs) - residual
-    assert all(hosts[p] == set(p) for p in required)
-    assert all(not any(set(e) <= row for e in residual) for row in hosts.values())
+    check(all(hosts[p] == set(p) for p in required), 'all(hosts[p] == set(p) for p in required)')
+    check(all(not any(set(e) <= row for e in residual) for row in hosts.values()), 'all(not any(set(e) <= row for e in residual) for row in hosts.values())')
     score = {q: 2 * len(residual.intersection(inside[q])) - len(inside[q]) - 1
              for q in blocks}
-    assert all(x >= 0 for x in (*weights.values(), *prices.values()))
-    assert all(sum(x for q, x in weights.items() if e in inside[q]) <= 1 for e in pairs)
-    assert all(sum(prices.get(e, 0) for e in inside[q]) >= score[q] for q in blocks)
+    check(all(x >= 0 for x in (*weights.values(), *prices.values())), 'all(x >= 0 for x in (*weights.values(), *prices.values()))')
+    check(all(sum(x for q, x in weights.items() if e in inside[q]) <= 1 for e in pairs), 'all(sum(x for q, x in weights.items() if e in inside[q]) <= 1 for e in pairs)')
+    check(all(sum(prices.get(e, 0) for e in inside[q]) >= score[q] for q in blocks), 'all(sum(prices.get(e, 0) for e in inside[q]) >= score[q] for q in blocks)')
     fractional = sum(x * score[q] for q, x in weights.items())
-    assert fractional == sum(prices.values())
+    check(fractional == sum(prices.values()), 'fractional == sum(prices.values())')
     if lost == "01":
         tight = [q for q in blocks if sum(prices.get(e, 0) for e in inside[q]) == score[q]]
         at34 = [q for q in tight if "34" in inside[q]]
         at15 = [q for q in tight if "15" in inside[q]]
-        assert set(at34) == {"1234", "2345"}
-        assert set(at15) == {"0125", "0145", "1245", "01245"}
-        assert all(mask[a] & mask[b] for a in at34 for b in at15)
-        assert not mask["234"] & mask["0145"] and (score["234"], score["0145"]) == (2, 3)
+        check(set(at34) == {"1234", "2345"}, 'set(at34) == {"1234", "2345"}')
+        check(set(at15) == {"0125", "0145", "1245", "01245"}, 'set(at15) == {"0125", "0145", "1245", "01245"}')
+        check(all(mask[a] & mask[b] for a in at34 for b in at15), 'all(mask[a] & mask[b] for a in at34 for b in at15)')
+        check(not mask["234"] & mask["0145"] and (score["234"], score["0145"]) == (2, 3), 'not mask["234"] & mask["0145"] and (score["234"], score["0145"]) == (2, 3)')
     integral = integral_optimum(score)
     baseline = len(pairs) + sum(map(len, hosts.values())) - 2 * len(required)
     result = baseline - integral, baseline - fractional
-    assert result == expected
+    check(result == expected, 'result == expected')
     print(f"I={integral}, F={fractional}, cp={result[0]}, cp*={result[1]}")

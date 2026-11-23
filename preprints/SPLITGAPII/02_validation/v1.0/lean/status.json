@@ -1,17 +1,20 @@
 {
+  "edition": "1.0",
   "status": "PASS",
-  "toolchain": "leanprover/lean4:v4.35.0-rc3",
-  "mathlib": "c55e6e786f49471c72fbddbec5415808896aec1e",
-  "dependency_heads_verified": 9,
-  "basis_commit": "68d353c44d3eb1ac865b529f33804117fb6ed8c3",
-  "successful_lake_jobs": 9004,
-  "compiled_project_sources": 44,
-  "all_theorem_declarations_including_dependencies_and_generated_declarations": 830,
-  "principal_axiom_checks": 25,
-  "axioms_allowed": [
-    "propext",
-    "Classical.choice",
-    "Quot.sound"
+  "historical_clean_build": "1.0 commit 685333d90f836dffd8f4e196887c8259d76e2f2f",
+  "inherited_source_version": "0.2.0",
+  "revalidated_inherited_theorem_records": 830,
+  "named_inherited_declarations": 25,
+  "additional_module": "SplitGapII11.lean",
+  "additional_declarations": 2,
+  "registered_new_proofs": [
+    "local_deletion_list_sizes",
+    "single_deletion_gap_jump"
   ],
-  "method": "Fresh project build directory. Local dependency paths resolve to the locked commits. Project sources match the archived sources. AllAxioms was run separately on the compiled environment."
+  "scope": "List-capacity arithmetic and gap arithmetic; finite packing optima verified by exact Python, general constructions proved in the paper.",
+  "mathlib": "c55e6e786f49471c72fbddbec5415808896aec1e",
+  "toolchain": "leanprover/lean4:v4.35.0-rc3",
+  "last_build": "Both Lake targets and AllAxioms on the pinned project environment; inherited output compared line for line.",
+  "edition_verification": "Compared all frozen source bytes and the complete ZIP with revision cdd5a2a and checked the recorded axiom lists. Prior build logs retained.",
+  "freeze_sha256": "fb167eed7405bc79ab3680ab6207a6911415448fd48786db690291034c19c074"
 }

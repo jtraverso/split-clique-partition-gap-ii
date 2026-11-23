@@ -2,7 +2,7 @@ note: using only cached resource files
 note: Running TeX ...
 note: Rerunning TeX because "split-gap-ii-es.aux" changed ...
 note: Running xdvipdfmx ...
-note: Writing `[audit-work]\typeset\split-gap-ii-es.pdf` (109.2119140625 KiB)
-note: Writing `[audit-work]\typeset\split-gap-ii-es.log` (25.171875 KiB)
+note: Writing `[audit-work]\official-10-build\01_manuscript\split-gap-ii-es.log` (25.2744140625 KiB)
+note: Writing `[audit-work]\official-10-build\01_manuscript\split-gap-ii-es.pdf` (127.0751953125 KiB)
 note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)
 Fontconfig error: Cannot load default config file: No such file: (null)

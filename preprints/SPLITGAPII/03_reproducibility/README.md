@@ -1,12 +1,11 @@
-# Reproducing the checks
+# Verification and regeneration
 
-Run python six_core.py in this directory with Python 3. The exact computation checks all three rows and the tight-set obstruction in the middle row.
+Python 3.10 or later suffices for verify_edition.py, six_core.py and eight_core.py. Run these programs with Python from this directory. The first compares the sealed bytes with the SHA-256 manifest, validates the formal evidence, and executes both exact finite examples. A new Lean run requires elan, the pinned dependencies and the commands in the formalization companion.
 
-With Pandoc and Tectonic on PATH, run python build_preprint.py --logs /path/to/build-logs to typeset the two manuscripts and two companions. Use a new log directory outside the edition. The first run can require network access for TeX resources. The builder performs three passes per document. In the repository, python scripts/verify_preprint.py verifies the frozen distribution without typesetting it again.
+To regenerate the documents in a separate directory, run the following from this directory, replacing OUTPUT with a directory outside the edition.
 
-The formal source archive in 05_formalization contains the pinned Lake manifest, the toolchain, the sources and both axiom checkers. From its lean directory, run:
+    python build_preprint.py --output OUTPUT --pandoc pandoc --tectonic tectonic
 
-    lake exe cache get
-    lake build SplitGapII SplitGapIIAudit
-    lake env lean SplitGapIIAudit.lean
-    lake env lean AllAxioms.lean
+Tested with Pandoc 3.11 (minimum 3.8 for the syntax-highlighting option), Tectonic 0.17.0 and its default v33 bundle. The first run may download TeX resources. The output includes TeX, figures, six PDFs and the compiler logs. This regenerates content. The manifest identifies the specific distributed PDF bytes, which can also depend on engine metadata.
+
+The historical source package version 0.2.0 identifies the unchanged base of the Lean library. The formal source ZIP is identical to the audited review freeze at cdd5a2a and includes SplitGapII11.lean. Its two declarations concern numerical implications. The manuscript gives the combinatorial proof of protected recovery and eight_core.py verifies the sharp example without relying on a solver.

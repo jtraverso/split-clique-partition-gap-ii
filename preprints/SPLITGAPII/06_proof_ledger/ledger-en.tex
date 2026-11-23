@@ -1,0 +1,123 @@
+\documentclass[english,11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\newlength{\LeanCharWidth}
+\usepackage{amsmath,amssymb}
+\usepackage[english]{babel}
+\usepackage{microtype,parskip}
+\usepackage{graphicx,float,caption}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\clubpenalty=10000\widowpenalty=10000
+\DeclareMathSizes{9}{10}{7}{5}
+\hypersetup{pdflang={en-US},colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\hypersetup{pdftitle={Proof ledger for *Stability of the Clique Partition Gap in Split Graphs*},pdfauthor={Juan Pablo Traverso Gianini}}
+\title{Proof ledger for *Stability of the Clique Partition Gap in Split Graphs*}
+\author{Juan Pablo Traverso Gianini\\\small Independent researcher, Santiago, Chile\\\small\href{mailto:jtraverso@gmail.com}{jtraverso@gmail.com}\quad\href{https://orcid.org/0009-0003-6068-4096}{ORCID 0009-0003-6068-4096}}
+\date{Preprint 1.0 \enspace · \enspace November 23, 2026}
+\begin{document}\raggedbottom\maketitle
+\begin{center}\small Paper II in the series on clique partition gaps in split graphs.\end{center}
+\noindent\textbf{Reserved DOI:} \url{https://doi.org/10.5281/zenodo.24452724}\\
+\textbf{Paper II repository:} \url{https://github.com/jtraverso/split-clique-partition-gap-ii}
+\subsection{1. From edge loads to the score of a core clique}\label{from-edge-loads-to-the-score-of-a-core-clique}
+
+In a split presentation \(V\) is the clique and \(H\) is independent. A graph \(B\) on \(V\) marks the residual edges. Each remaining core pair belongs to \(J\) and is available for a host triangle. An assignment designates a host adjacent to both endpoints. Pairs designated to the same host must form a matching so that the triangles have distinct crossing edges.
+
+For a fractional partition, fix an edge \(e\). Its total load is one. Sum this equality over edges, interchange the two finite sums, and count how many times each \(x_K\) occurs. It occurs once for each of the edges of \(K\).
+\[
+\sum_{e\in E(G)}1=\sum_e\sum_{K\supseteq e}x_K=\sum_K\binom{|K|}{2}x_K.
+\]
+
+The left-hand side is the cost of using every edge as a separate piece. Subtract the cost of the chosen partition. A single term with \(|K|=3\) and \(x_K=1/2\), for example, contributes \(3/2-1/2=1\) unit of saving.
+\[
+|E(G)|-\sum_Kx_K=\sum_K\left(\binom{|K|}{2}-1\right)x_K.
+\]
+
+For a core piece \(Q\), write \(a=\binom{|Q|}{2}\) and \(j=|J\cap\binom Q2|\). There are \(a-j\) residual edges. A host triangle replaces three single edges with one piece, saving two. Occupying the \(j\) required pairs therefore displaces potential savings of \(2j\). This gives the two expressions for the score and proves (3).
+\[
+w(Q)=(a-1)-2j=2(a-j)-a-1=2e_B(Q)-a-1.
+\]
+
+\subsection{2. Why the full assignment is exact (Lemma 2)}\label{why-the-full-assignment-is-exact-lemma-2}
+
+A piece containing a host can contain no second host. If it has \(u\) core vertices, all its \(\binom u2\) core pairs lie in \(J\), because its neighborhood is independent in \(B\). Compare the allowance of two per required pair with the saving on its actual edges.
+\[
+2\binom u2-\left(\binom u2+u-1\right)=\binom u2-u+1=\frac{(u-1)(u-2)}2.
+\]
+
+For \(u=1,2,3,4\) the allowances are respectively \(0,2,6,12\) and the actual savings are \(0,2,5,9\). The first strict inequality occurs at \(u=3\). To sum over pieces, each core piece contributes its score plus two per occupied required pair. Each hosted piece contributes at most two per such pair. Their total charge to any pair is at most two because its total load is one. Core scores sum to at most the residual optimum, denoted by \(P\) here for either packing problem.
+
+To attain the upper bound, start with an optimal residual packing \(y\). For every required pair \(e\), let \(\ell_e\) be its load in \(y\). Its designated triangle receives weight \(1-\ell_e\). Properness protects the two crossing edges of every designated triangle. The remaining capacities are filled by single edges. These weights are integral whenever \(y\) is integral. The two contributions to saving add as follows.
+\[
+\begin{aligned}
+S_{\rm core}&=P+2\sum_{e\in J}\ell_e,\\
+S_{\rm host}&=2\sum_{e\in J}(1-\ell_e),\\
+S_{\rm core}+S_{\rm host}&=P+2|J|.
+\end{aligned}
+\]
+
+Subtracting this sum from \(|E(G)|\) gives both equalities in (2). When their difference is taken, the same baseline cancels and the gap is \(F(B)-I(B)\).
+
+\subsection{3. Missing assignments and the two directions of error}\label{missing-assignments-and-the-two-directions-of-error}
+
+For Lemma 3, intersect every clique of a larger graph with the vertices of the induced subgraph. Surviving edges keep their unit loads. Conversely, a partition of the deleted edges into \(p\) pieces extends either optimum at added cost at most \(p\). The two cost increments are both in \([0,p]\), so their difference has absolute value at most \(p\).
+
+In Theorem 1 a private vertex of degree two completes each of the \(L\) missing pairs. The pair itself was already a core edge. Deleting the new vertices removes exactly \(2L\) crossing edges, which can be supplied individually in the restriction bound. The completed graph has gap \(\Phi(B)=F(B)-I(B)\) by Lemma 2.
+
+Lemma 4 can instead be checked on the original graph. Write \(M=J\setminus J_0\), \(A=|E(G)|-2|J|\). The missing triangles forgo \(R=2\sum_{e\in M}(1-\ell_e)\) units of saving in the construction of Section 2 of this ledger. Thus the cost for either problem lies between \(A-P\) and \(A-P+R\). Subtract the upper fractional endpoint from the lower integral endpoint for the first bound. Reverse the endpoint choices for the second.
+\[
+\begin{aligned}
+(A-I)-(A-F+R_F)&=F-I-R_F,\\
+(A-I+R_I)-(A-F)&=F-I+R_I.
+\end{aligned}
+\]
+
+\subsection{4. Deletions, equality and the protected assignment}\label{deletions-equality-and-the-protected-assignment}
+
+In Corollary 5 each lost triangle has a deleted crossing edge. Since original triangles are edge-disjoint, choosing one such edge per lost triangle gives an injection into the set of deletions. Thus \(L\le q\), giving (6). Proposition 6 concerns a different operation: adding one residual edge increases the score of each fixed packing by twice its load there. Both optimum increases lie in \([0,2]\), so the change of their difference has absolute value at most two. Iterating gives (7).
+
+The twelve-vertex example gives successive gaps \(10-10=0\), \(11-10=1\) and \(11-11=0\). For sharpness use Proposition 5a. Moving the pair \(14\) into the residual restores a complete assignment for the exact evaluation after deletion. The old and new baselines and optima yield
+\[
+\begin{aligned}
+(28-11)-(28-35/3)&=2/3,\\
+(29-11)-(29-41/3)&=8/3,\\
+8/3-2/3&=2.
+\end{aligned}
+\]
+
+The two finite verifiers in the distribution check each fractional packing against every pair capacity and each dual price vector against every core subset. Equality of the primal and dual values certifies the fractional optimum. The integer recurrence either takes an available positive-score clique and removes its pairs, or ends with value zero. It terminates because every selected clique removes at least one pair. With the original residual kept fixed, the deletion at \(14\) leaves \(L=1\) and gives equality in (1) as well.
+
+For Proposition 6a, write \(b=\lfloor(v+r)/2\rfloor\). Each endpoint of a mixed pair can exclude at most \(b\) hosts, so each list in its own family retains at least \(w+v+r-2b\ge w\) hosts. Galvin colors each bipartite request graph, of maximum degree at most \(w\). The three families are disjoint. At each vertex of \(W\) at most \(v\) hosts have now been used. For an internal pair, sum the exclusions from both ends and subtract them once from the full pool:
+\[
+3(w+v+r)-2b-2v\ \ge\ 3(w+v+r)-(v+r)-2v=3w+2r\ge w.
+\]
+
+Häggkvist--Janssen therefore colors the internal pairs without using the crossing edges already consumed. Only the old assigned triangles can be lost. Before deletion use (2) and afterwards (1), with the same residual in both, obtaining \(2q_0\). For the padded examples there are at least \(n/25-4\) unused padding hosts. This exceeds \(3\lfloor n/100\rfloor\) for all sufficiently large \(n\). Redistributing that many hosts supplies the three enlarged families at fixed order. Choosing \(b\) deletions at each of the \(w\) padding vertices leaves the old triangles intact and permits \(wb=\Theta(n^2)\) deletions.
+
+\subsection{5. Reading recovery bounds from the surviving neighborhoods}\label{reading-recovery-bounds-from-the-surviving-neighborhoods}
+
+In Proposition 7 an edge \(e\) whose list is short by \(d_k(e)\) receives the auxiliary colors numbered from one to \(d_k(e)\). This ensures at least \(k\) colors on each list. After a proper coloring, edges using auxiliary color \(t\) form a matching in \(D_t^{(k)}\). They account for at most its matching number. Every discarded edge has exactly one color, so summing those bounds counts it once. Theorem 1 converts the missed-pair count into (8).
+
+In Corollary 8 take the empty residual. All residual scores are negative, so the empty packing gives \(F=I=0\). If \(|H|\ge2c\), set \(s_u=(|M_u|-\lfloor c/2\rfloor)_+\), where \(M_u\) is the omitted host set at \(u\). The list at \(uv\) has size at least \(|H|-|M_u|-|M_v|\ge c-s_u-s_v\). Private sets of \(s_u\) and \(s_v\) auxiliary colors thus suffice for this edge. Each private color can be used only at its own vertex and hence on at most one edge. This gives \(\Delta(G)\le2\sum_u s_u\). If all excesses vanish, the gap vanishes even with many omissions.
+
+In Theorem 9 choose one matching at each host from a convex decomposition of its fractional matching. The probability that \(e\) is absent at every host factors by independence. Removing duplicate assignments changes no uncovered pair. The resulting assignment satisfies Lemma 4 in every outcome, so expectation replaces each missing-pair indicator by \(p_e\). Bounding the unused capacity by one and using \(1-x\le e^{-x}\) gives the two inequalities (11).
+
+For Proposition 10 a hyperedge uses three resources: a required pair and its two crossing incidences. Two resources determine at most one candidate, giving codegree at most one. The degree cap \(D\) must cover both pair lists and host incidences. Under the size and degree hypotheses in the proposition, Ehard--Glock--Joos gives a matching of size at least \((1-D^{-\epsilon})S/D\). Each chosen hyperedge assigns a distinct pair without repeating any crossing edge. Subtract its size from \(|J|\) and multiply by two as in (1).
+
+\end{document}

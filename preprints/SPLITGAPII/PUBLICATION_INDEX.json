@@ -1,10 +1,10 @@
 {
-  "title_en": "Additive Gaps for Edge-Clique Partitions of Split Graphs II. Stability of Host Transfer",
-  "title_es": "Gaps aditivos para particiones de aristas en cliques de grafos split II. Estabilidad de la transferencia mediante hosts",
+  "title_en": "Stability of the Clique Partition Gap in Split Graphs",
+  "title_es": "Estabilidad de la brecha de partición en cliques en grafos split",
   "author": "Juan Pablo Traverso Gianini",
   "version": "1.0",
   "distribution": "preprint",
-  "edition_date": "2026-11-22",
+  "edition_date": "2026-11-23",
   "doi": "10.5281/zenodo.24452724",
   "doi_status": "reserved_not_published_at_audit",
   "repository": "https://github.com/jtraverso/split-clique-partition-gap-ii",
@@ -15,5 +15,12 @@
   "manuscripts": [
     "01_manuscript/split-gap-ii-en.pdf",
     "01_manuscript/split-gap-ii-es.pdf"
+  ],
+  "language_of_record": "en",
+  "series_part": 2,
+  "part_i_repository": "https://github.com/jtraverso/split-clique-partition-gap",
+  "proof_ledgers": [
+    "06_proof_ledger/ledger-en.pdf",
+    "06_proof_ledger/ledger-es.pdf"
   ]
 }

@@ -1,17 +1,18 @@
-# Additive Gaps for Edge-Clique Partitions of Split Graphs II
+# Stability of the Clique Partition Gap in Split Graphs
 
-**Stability of Host Transfer** · Juan Pablo Traverso Gianini · Preprint 1.1 · 23 November 2026
+**Paper II in the series on clique partition gaps in split graphs** · Juan Pablo Traverso Gianini · Preprint 1.0 · 23 November 2026
 
-The second paper in the series studies perturbations of the exact transfer established in [Part I](https://github.com/jtraverso/split-clique-partition-gap). A proper assignment missing $L$ required pairs determines the unrestricted partition gap to within $2L$ of the residual packing gap. The coefficient two is attained by a single crossing-edge deletion on eighteen vertices. For the padded witnesses from Part I, a same-order construction tolerates quadratically many deletions within per-vertex budgets while retaining exactly the original gap when the old assigned triangles survive.
+This repository accompanies Paper II. The English manuscript is the edition of record. The first paper, [*Nearly Quadratic Additive Gaps for Edge-Clique Partitions of Split Graphs*](https://github.com/jtraverso/split-clique-partition-gap), established the exact transfer. A proper assignment missing $L$ required pairs determines the unrestricted partition gap to within $2L$ of the residual packing gap. The coefficient two is attained by a single crossing-edge deletion on eighteen vertices. For the padded witnesses from Part I, a same-order construction tolerates quadratically many deletions within per-vertex budgets while retaining exactly the original gap when the old assigned triangles survive.
 
 | | English | Español |
 |---|---|---|
-| Manuscript | [PDF](preprints/SPLITGAPII-v1.1/01_manuscript/split-gap-ii-en.pdf) · [Markdown](preprints/SPLITGAPII-v1.1/01_manuscript/split-gap-ii-en.md) | [PDF](preprints/SPLITGAPII-v1.1/01_manuscript/split-gap-ii-es.pdf) · [Markdown](preprints/SPLITGAPII-v1.1/01_manuscript/split-gap-ii-es.md) |
-| Formalization companion | [PDF](preprints/SPLITGAPII-v1.1/05_formalization/companion-en.pdf) | [PDF](preprints/SPLITGAPII-v1.1/05_formalization/companion-es.pdf) |
+| Manuscript | [PDF](preprints/SPLITGAPII/01_manuscript/split-gap-ii-en.pdf) · [Markdown](preprints/SPLITGAPII/01_manuscript/split-gap-ii-en.md) | [PDF](preprints/SPLITGAPII/01_manuscript/split-gap-ii-es.pdf) · [Markdown](preprints/SPLITGAPII/01_manuscript/split-gap-ii-es.md) |
+| Step-by-step proof ledger | [PDF](preprints/SPLITGAPII/06_proof_ledger/ledger-en.pdf) · [Markdown](preprints/SPLITGAPII/06_proof_ledger/ledger-en.md) | [PDF](preprints/SPLITGAPII/06_proof_ledger/ledger-es.pdf) · [Markdown](preprints/SPLITGAPII/06_proof_ledger/ledger-es.md) |
+| Formalization companion | [PDF](preprints/SPLITGAPII/05_formalization/companion-en.pdf) | [PDF](preprints/SPLITGAPII/05_formalization/companion-es.pdf) |
 
-**Reserved DOI** <https://doi.org/10.5281/zenodo.24452724> · [Complete edition](archives/split-gap-ii-preprint-v1.1.zip) · [Lean source archive](preprints/SPLITGAPII-v1.1/05_formalization/split-gap-ii-lean-v1.1.zip)
+**Reserved DOI** <https://doi.org/10.5281/zenodo.24452724> · [Complete edition](archives/split-gap-ii-preprint-v1.0.zip) · [Lean source archive](preprints/SPLITGAPII/05_formalization/split-gap-ii-lean-v1.0.zip)
 
-Run `python scripts/verify_preprint.py` from the repository root to verify the edition, archive, finite examples and recorded audit. The [audit report](preprints/SPLITGAPII-v1.1/02_validation/v1.1/AUDIT_RESULT.json) states the scope of the checks.
+Run `python scripts/verify_preprint.py` from the repository root to verify the edition, archive, finite examples and recorded audit. The [audit report](preprints/SPLITGAPII/02_validation/v1.0/AUDIT_RESULT.json) states the scope of the checks.
 
 ### Reproducing the Lean results
 
@@ -26,7 +27,7 @@ lake env lean AllAxioms.lean
 lake env lean SplitGapII11.lean
 ```
 
-The [toolchain](lean/lean-toolchain) selects Lean 4.35.0-rc3. The [Lake manifest](lean/lake-manifest.json) pins Mathlib at `c55e6e786f49471c72fbddbec5415808896aec1e` and locks its transitive dependencies. The [provenance file](lean/PROVENANCE.json) records the revisions of Parts I, V and VI and the local adaptation of the integral lower bound. All project Lean sources are included. The [1.1 build record](preprints/SPLITGAPII-v1.1/02_validation/v1.1/lean/status.json) and [1.1 axiom output](preprints/SPLITGAPII-v1.1/02_validation/v1.1/lean/edition11-axioms.log) accompany the [audit entry point](lean/SplitGapIIAudit.lean).
+The [toolchain](lean/lean-toolchain) selects Lean 4.35.0-rc3. The [Lake manifest](lean/lake-manifest.json) pins Mathlib at `c55e6e786f49471c72fbddbec5415808896aec1e` and locks its transitive dependencies. The [provenance file](lean/PROVENANCE.json) records the revisions of Parts I, V and VI and the local adaptation of the integral lower bound. All project Lean sources are included. The [formal build record](preprints/SPLITGAPII/02_validation/v1.0/lean/status.json) and [axiom output](preprints/SPLITGAPII/02_validation/v1.0/lean/edition11-axioms.log) accompany the [audit entry point](lean/SplitGapIIAudit.lean).
 
 ### Where to check each claim
 
@@ -50,8 +51,10 @@ Proposition 5a includes an exact computational certificate for the eighteen-vert
 Run the following programs from the repository root using Python 3.10 or newer.
 
 ~~~sh
-python preprints/SPLITGAPII-v1.1/03_reproducibility/eight_core.py
-python preprints/SPLITGAPII-v1.1/03_reproducibility/six_core.py
+python preprints/SPLITGAPII/03_reproducibility/eight_core.py
+python preprints/SPLITGAPII/03_reproducibility/six_core.py
 ~~~
 
-The formalization package keeps the 0.2 library version to identify the source underlying the original transfer bounds. Edition 1.1 adds a separately checked module and freezes both. The 1.0 edition and its audit are available at [commit 685333d](https://github.com/jtraverso/split-clique-partition-gap-ii/tree/685333d90f836dffd8f4e196887c8259d76e2f2f).
+The formal source ZIP is byte-for-byte identical to the freeze checked at commit cdd5a2a. Its base library retains package version 0.2.0. Earlier private review versions and their audits remain in Git history.
+
+The active edition is under preprints/SPLITGAPII. The directory preprints/SPLITGAPII-v1.1 preserves an earlier private review snapshot.

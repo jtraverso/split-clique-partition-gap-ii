@@ -45,6 +45,7 @@
   "QuadraticExteriorPalomar/SplitRealizer.lean": "5203cf2ca7ca500c40d4eebec70c9b3d185bc0b02b12a67de4f68259f29eb92f",
   "QuadraticExteriorPalomar/WeightedRecovery.lean": "939626e560f09a82b58ad6537119602e23e5b042d94ae2546be517ae1b9c17b8",
   "SplitGapII.lean": "305c8ce76ea3223703eb032f1496c71fd12e109b0596bc08f48ffc0973d6d8dc",
+  "SplitGapII11.lean": "92eb1fdc977dda5760dfc6697e5eaa1af9a19553e2b7d8d7c43ca7865d66b308",
   "SplitGapIIAudit.lean": "ed65ee9456e264df2019b73de0f70076792e2b4a8dc7ef9d2a99e21ea04d1642",
   "lake-manifest.json": "bdd5015ad46edab348717cba2bd9ab2bd7b4b8dbe93dacf696d90c423b88d5ad",
   "lakefile.toml": "ca7ce9dce8bec4138543970f2237f527fcea48a76dda6e14336245c542994d68",

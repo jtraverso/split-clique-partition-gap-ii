@@ -22,5 +22,6 @@
   "proof_ledgers": [
     "06_proof_ledger/ledger-en.pdf",
     "06_proof_ledger/ledger-es.pdf"
-  ]
+  ],
+  "series_repository": "https://github.com/jtraverso/split-clique-partition-gap"
 }

@@ -1,8 +1,8 @@
 {
   "split-gap-ii-en": {
     "pages": 12,
-    "pdf_sha256": "85462dda6273bc22241302682d1433f8970e8a3c0627b7f06e9156b68427bdaa",
-    "tex_sha256": "eaa5f0b523f5d613be0f1e11ce702adfca198fecf2209e6ba96897464c037f94",
+    "pdf_sha256": "9d2b93d888fe615ea7269fc6e494db0ef173aacfdfa5bd5dbdcf7b93bc469146",
+    "tex_sha256": "c97567088190fabfce50b5894197818b4c5ccb5c5965c9462cd78713c219f2ea",
     "printed_reference_urls": [
       "https://github.com/jtraverso/split-clique-partition-gap",
       "https://doi.org/10.1017/S0963548397002927",
@@ -13,12 +13,16 @@
       "https://github.com/jtraverso/berge-matching",
       "https://github.com/jtraverso/split-clique-partition-gap-ii",
       "https://doi.org/10.1006/jctb.1995.1011"
+    ],
+    "title_page_repositories": [
+      "https://github.com/jtraverso/split-clique-partition-gap",
+      "https://github.com/jtraverso/split-clique-partition-gap-ii"
     ]
   },
   "split-gap-ii-es": {
     "pages": 13,
-    "pdf_sha256": "11b87d8110605b7b57876e74cf85ab898dbc709b77a20c73779e6b3eda2e64fc",
-    "tex_sha256": "8f97afed49796486e449e32161221ccafc762c637bcd21f90bb8ee937133bbf5",
+    "pdf_sha256": "14d71c39697f8404468a6eaa884d6ee22c93b5d1092e35fc9ef4f669998f60ed",
+    "tex_sha256": "c993899bab5375699233430ac46079db890e7a141dc0dcdd82d93f380e2f72f6",
     "printed_reference_urls": [
       "https://github.com/jtraverso/split-clique-partition-gap",
       "https://doi.org/10.1017/S0963548397002927",
@@ -29,30 +33,50 @@
       "https://github.com/jtraverso/berge-matching",
       "https://github.com/jtraverso/split-clique-partition-gap-ii",
       "https://doi.org/10.1006/jctb.1995.1011"
+    ],
+    "title_page_repositories": [
+      "https://github.com/jtraverso/split-clique-partition-gap",
+      "https://github.com/jtraverso/split-clique-partition-gap-ii"
     ]
   },
   "companion-en": {
     "pages": 1,
-    "pdf_sha256": "015baa0ff4dc0c293013d992647b27a80c3e05bdb8d9a9216a8d1a0906e8e445",
-    "tex_sha256": "11c06b6f1ff06eacd67b4682ede876af5087a4514b83b99973a18e238a4d2efa",
-    "printed_reference_urls": []
+    "pdf_sha256": "4928b3948f709c027fac83ab1c0e51465d91b9e11a7c22ee53f7a54d81adbda8",
+    "tex_sha256": "2b93dcf94fcf5de0f99ba2bda4e83df17249029b614b35877a658b22cd182f07",
+    "printed_reference_urls": [],
+    "title_page_repositories": [
+      "https://github.com/jtraverso/split-clique-partition-gap",
+      "https://github.com/jtraverso/split-clique-partition-gap-ii"
+    ]
   },
   "companion-es": {
     "pages": 1,
-    "pdf_sha256": "faaf8c14d79140dffa4f2364ea14f55787560381e534d9fbbe441ddbd4fa08b2",
-    "tex_sha256": "f6d2198717f7ac1566584a407d5cfbdcba5744124d34837dbe6b59e0bb056589",
-    "printed_reference_urls": []
+    "pdf_sha256": "6c2a6cee4c71ae749d939162351a254b6941350b14bee2a763650ec7ffdc5891",
+    "tex_sha256": "dfbfe4aeaebd2c87b57898414aac761d88c3ef0046a2f62784c90bf927a85f4f",
+    "printed_reference_urls": [],
+    "title_page_repositories": [
+      "https://github.com/jtraverso/split-clique-partition-gap",
+      "https://github.com/jtraverso/split-clique-partition-gap-ii"
+    ]
   },
   "ledger-en": {
     "pages": 3,
-    "pdf_sha256": "b82fbc458553974e89dc0665aae89b88fd906f283dbf6be0cb5811962feae033",
-    "tex_sha256": "eb50fb0d36c443d46520de2105806edfa339369340f829e2492cffd708b921aa",
-    "printed_reference_urls": []
+    "pdf_sha256": "264ba5da97f36824d71f4f50580e90b3984d5edb3583ffd5149fef00c592c0fb",
+    "tex_sha256": "1cabbad609c15e64707a3d138f2ff2bd61872e619add1f5f24363bdaba8295d9",
+    "printed_reference_urls": [],
+    "title_page_repositories": [
+      "https://github.com/jtraverso/split-clique-partition-gap",
+      "https://github.com/jtraverso/split-clique-partition-gap-ii"
+    ]
   },
   "ledger-es": {
     "pages": 4,
-    "pdf_sha256": "58cf6ce1653b56249c9e9776ca06b57b8103aa000278ba63be1dc33acefca197",
-    "tex_sha256": "b2235abdf1d5eead483eeb7985b9c9e292623947267a0aab2fca8621d7d07eb3",
-    "printed_reference_urls": []
+    "pdf_sha256": "07d27d15de4041ee036e6a5705842e0159a8e9fa64b82d1ebcdba35d6ff7db99",
+    "tex_sha256": "a27c119d12a83896da4f81a065e0fdbf4c7a73e3c8dfd06531cf7dc442d6f11f",
+    "printed_reference_urls": [],
+    "title_page_repositories": [
+      "https://github.com/jtraverso/split-clique-partition-gap",
+      "https://github.com/jtraverso/split-clique-partition-gap-ii"
+    ]
   }
 }

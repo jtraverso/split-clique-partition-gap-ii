@@ -2,7 +2,7 @@
 
 **Paper II in the series on clique partition gaps in split graphs** · Juan Pablo Traverso Gianini · Preprint 1.0 · 23 November 2026
 
-This repository accompanies Paper II. The English manuscript is the edition of record. The first paper, [*Nearly Quadratic Additive Gaps for Edge-Clique Partitions of Split Graphs*](https://github.com/jtraverso/split-clique-partition-gap), established the exact transfer. A proper assignment missing $L$ required pairs determines the unrestricted partition gap to within $2L$ of the residual packing gap. The coefficient two is attained by a single crossing-edge deletion on eighteen vertices. For the padded witnesses from Part I, a same-order construction tolerates quadratically many deletions within per-vertex budgets while retaining exactly the original gap when the old assigned triangles survive.
+This repository accompanies Paper II. The [official series repository](https://github.com/jtraverso/split-clique-partition-gap) also hosts Part I. The English manuscript is the edition of record. The first paper, [*Nearly Quadratic Additive Gaps for Edge-Clique Partitions of Split Graphs*](https://github.com/jtraverso/split-clique-partition-gap), established the exact transfer. A proper assignment missing $L$ required pairs determines the unrestricted partition gap to within $2L$ of the residual packing gap. The coefficient two is attained by a single crossing-edge deletion on eighteen vertices. For the padded witnesses from Part I, a same-order construction tolerates quadratically many deletions within per-vertex budgets while retaining exactly the original gap when the old assigned triangles survive.
 
 | | English | Español |
 |---|---|---|

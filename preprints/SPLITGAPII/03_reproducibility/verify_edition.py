@@ -42,8 +42,12 @@ def main():
     receipt = data(QA/"doi-reservation.json")
     check(index["doi"] == receipt["doi"] == DOI and receipt["submitted"] is False, "reservation at audit")
     check(index["repository"] == URL and index["title_en"] == receipt["title"] and index["version"]=="1.0", "official metadata")
+    series = index["series_repository"]
+    check(series == index["part_i_repository"] == "https://github.com/jtraverso/split-clique-partition-gap", "series repository")
     docs = [read(ED/f"01_manuscript/split-gap-ii-{lang}.md") for lang in ("en","es")]
     for lang, doc in zip(("en","es"),docs):
+        label = "Official series repository" if lang == "en" else "Repositorio oficial de la serie"
+        check(f"{label} <{series}>" in doc.split("## ",1)[0], lang+" series attribution")
         check(doc.splitlines()[0][2:] == index["title_"+lang] and DOI in doc and URL in doc, lang+" title and identifiers")
         check(re.findall(r"\\tag\{(\d+)\}",doc)==list(map(str,range(1,12))),lang+" equation numbering")
         check(re.findall(r"^\*\*(?:Theorem|Lemma|Corollary|Proposition|Teorema|Lema|Corolario|Proposición) (\d+[a-z]?)",doc,re.M)=="1 2 3 4 5 5a 6 6a 7 8 9 10".split(),lang+" theorem numbering")

@@ -2,7 +2,7 @@ note: using only cached resource files
 note: Running TeX ...
 note: Rerunning TeX because "ledger-es.aux" changed ...
 note: Running xdvipdfmx ...
-note: Writing `[audit-work]\official-10-build\06_proof_ledger\ledger-es.log` (25.0302734375 KiB)
-note: Writing `[audit-work]\official-10-build\06_proof_ledger\ledger-es.pdf` (45.9765625 KiB)
+note: Writing `[audit-work]\series-10-build\06_proof_ledger\ledger-es.log` (25.0302734375 KiB)
+note: Writing `[audit-work]\series-10-build\06_proof_ledger\ledger-es.pdf` (46.1484375 KiB)
 note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)
 Fontconfig error: Cannot load default config file: No such file: (null)

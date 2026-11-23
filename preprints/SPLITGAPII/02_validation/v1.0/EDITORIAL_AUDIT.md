@@ -1,6 +1,6 @@
 # Editorial audit of Preprint 1.0
 
-The title names the stability result. The line beneath the author identifies Paper II, following the series treatment in the author's CDR papers. The abstract cites Part I at first mention, the introduction gives its title and reference [1] gives its DOI and printed repository address. The edition distinguishes the repository of Paper II from the repository cited for Part I.
+The title names the stability result. The line beneath the author identifies Paper II, following the series treatment in the author's CDR papers. The abstract cites Part I at first mention, the introduction gives its title and reference [1] gives its DOI and printed repository address. The title pages identify the repository of Part I as the official series repository, alongside the separate repository of Paper II.
 
 The English and Spanish manuscripts retain the twelve numbered statements and eleven tagged identities of the reviewed revision cdd5a2a. We compared every inline and displayed expression across the two languages, allowing the translated underbrace and the thousands separator. The separate ledgers agree paragraph by paragraph in their mathematical expressions. The Spanish uses *brecha*, *anfitrión* and *emparejamiento* and retains published titles in the bibliography.
 

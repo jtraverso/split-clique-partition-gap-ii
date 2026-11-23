@@ -10,6 +10,7 @@ Investigador independiente, Santiago, Chile<br>
 *Preprint 1.0 · 23 de noviembre de 2026*
 
 DOI reservado <https://doi.org/10.5281/zenodo.24452724>  
+Repositorio oficial de la serie <https://github.com/jtraverso/split-clique-partition-gap>  
 Repositorio del artículo II <https://github.com/jtraverso/split-clique-partition-gap-ii>
 
 ## Resumen

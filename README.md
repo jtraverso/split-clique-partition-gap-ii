@@ -10,7 +10,7 @@ This repository accompanies Paper II. The [official series repository](https://g
 | Step-by-step proof ledger | [PDF](preprints/SPLITGAPII/06_proof_ledger/ledger-en.pdf) · [Markdown](preprints/SPLITGAPII/06_proof_ledger/ledger-en.md) | [PDF](preprints/SPLITGAPII/06_proof_ledger/ledger-es.pdf) · [Markdown](preprints/SPLITGAPII/06_proof_ledger/ledger-es.md) |
 | Formalization companion | [PDF](preprints/SPLITGAPII/05_formalization/companion-en.pdf) | [PDF](preprints/SPLITGAPII/05_formalization/companion-es.pdf) |
 
-**DOI** <https://doi.org/10.5281/zenodo.24452724> · [Complete edition](archives/split-gap-ii-preprint-v1.0.zip) · [Lean source archive](preprints/SPLITGAPII/05_formalization/split-gap-ii-lean-v1.0.zip)
+**DOI** <https://doi.org/10.5281/zenodo.24452724> · [Read on alphaXiv](https://www.alphaxiv.org/abs/2611.clique-partition-gap-split-graphs) · [Complete edition](archives/split-gap-ii-preprint-v1.0.zip) · [Lean source archive](preprints/SPLITGAPII/05_formalization/split-gap-ii-lean-v1.0.zip)
 
 Run `python scripts/verify_preprint.py` from the repository root to verify the edition, archive, finite examples and recorded audit. The [audit report](preprints/SPLITGAPII/02_validation/v1.0/AUDIT_RESULT.json) states the scope of the checks.
 

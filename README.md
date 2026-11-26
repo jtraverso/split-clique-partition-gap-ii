@@ -14,6 +14,8 @@ This repository accompanies Paper II. The [official series repository](https://g
 
 Run `python scripts/verify_preprint.py` from the repository root to verify the edition, archive, finite examples and recorded audit. The [audit report](preprints/SPLITGAPII/02_validation/v1.0/AUDIT_RESULT.json) states the scope of the checks.
 
+**Palomar** The Lean formalization is registered as [PALOMAR-2026-11-23-000028](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-23-000028&version=1) (23 November 2026; [archived copy](https://github.com/PalomarArchive/jtraverso--split-clique-partition-gap-ii--7ea79274f46e/tree/cf86a53a6aa6e6db6b5e55c36381edbeb80ec200)). *Registrada en Palomar como PALOMAR-2026-11-23-000028 (23 de noviembre de 2026).*
+
 ### Reproducing the Lean results
 
 With Git and elan installed, run the following from the root of this repository. The initial checkout of the pinned dependencies and download of the Mathlib cache require network access.
